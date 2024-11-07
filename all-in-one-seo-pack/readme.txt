@@ -4,7 +4,7 @@ Tags: SEO, Google Search Console, XML Sitemap, meta description, schema
 Tested up to: 6.6.2
 Requires at least: 5.3
 Requires PHP: 7.0
-Stable tag: 4.7.4.1
+Stable tag: 4.7.4.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -225,6 +225,11 @@ AIOSEO&reg; is a registered trademark of Semper Plugins LLC. When writing about 
 * AISEO (incorrect)
 
 == Changelog ==
+
+**New in Version 4.7.4.2**
+
+* Updated: Compatibility with WordPress 6.7.
+* Fixed: AIOSEO metabox or setting pages sometimes not loading because WAFs or web server block JavaScript files from being loaded due to false-positives.
 
 **New in Version 4.7.4.1**
 
