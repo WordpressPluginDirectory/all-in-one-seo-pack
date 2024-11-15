@@ -184,7 +184,6 @@ return array(
     'AIOSEO\\Plugin\\Common\\Sitemap\\Image\\ThirdParty' => $baseDir . '/app/Common/Sitemap/Image/ThirdParty.php',
     'AIOSEO\\Plugin\\Common\\Sitemap\\Localization' => $baseDir . '/app/Common/Sitemap/Localization.php',
     'AIOSEO\\Plugin\\Common\\Sitemap\\Output' => $baseDir . '/app/Common/Sitemap/Output.php',
-    'AIOSEO\\Plugin\\Common\\Sitemap\\Ping' => $baseDir . '/app/Common/Sitemap/Ping.php',
     'AIOSEO\\Plugin\\Common\\Sitemap\\Priority' => $baseDir . '/app/Common/Sitemap/Priority.php',
     'AIOSEO\\Plugin\\Common\\Sitemap\\Query' => $baseDir . '/app/Common/Sitemap/Query.php',
     'AIOSEO\\Plugin\\Common\\Sitemap\\RequestParser' => $baseDir . '/app/Common/Sitemap/RequestParser.php',
