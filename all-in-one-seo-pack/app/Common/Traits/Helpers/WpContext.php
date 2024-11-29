@@ -490,7 +490,7 @@ trait WpContext {
 	 */
 	public function getTruSeoEligiblePostTypes() {
 		$allowedPostTypes  = aioseo()->helpers->getPublicPostTypes( true );
-		$excludedPostTypes = [ 'attachment', 'aioseo-location' ];
+		$excludedPostTypes = [ 'attachment', 'aioseo-location', 'web-story' ];
 		if ( class_exists( 'bbPress' ) ) {
 			$excludedPostTypes = array_merge( $excludedPostTypes, [ 'forum', 'topic', 'reply' ] );
 		}
@@ -708,7 +708,7 @@ trait WpContext {
 	 *
 	 * @since 4.1.3
 	 *
-	 * @return bool Wether the request is an AJAX, CRON or REST request.
+	 * @return bool Whether the request is an AJAX, CRON or REST request.
 	 */
 	public function isAjaxCronRestRequest() {
 		return wp_doing_ajax() || wp_doing_cron() || $this->isRestApiRequest();

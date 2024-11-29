@@ -281,8 +281,8 @@ $generated_i18n_strings = [
 	// Translators: 1 - The plugin short name ("AIOSEO").
 	__( '%1$s Table of Contents', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/pages/search-appearance/views/partials/Advanced.vue:69
-	// Reference: /src/vue/pages/search-appearance/views/partials/TitleDescription.vue:84
+	// Reference: /src/vue/pages/search-appearance/views/partials/Advanced.vue:68
+	// Reference: /src/vue/pages/search-appearance/views/partials/TitleDescription.vue:87
 	// Reference: /src/vue/standalone/post-settings/views/General.vue:169
 	// Translators: 1 - The type of page (Post, Page, Category, Tag, etc.).
 	__( '%1$s Title', 'all-in-one-seo-pack' ),
@@ -1571,7 +1571,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/pages/social-networks/views/Twitter.vue:68
 	__( 'Choose whether you want to use the OG data from the Facebook tab in your individual pages/posts by default.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/pages/search-appearance/views/partials/TitleDescription.vue:94
+	// Reference: /src/vue/pages/search-appearance/views/partials/TitleDescription.vue:97
 	// Translators: 1 - The plural name of the content type (e.g. "Posts" or "Categories").
 	__( 'Choose whether your %1$s should be included in search results. If you select "No", then your %1$s will be noindexed and excluded from the sitemap so that search engines ignore them.', 'all-in-one-seo-pack' ),
 
@@ -1627,7 +1627,7 @@ $generated_i18n_strings = [
 	__( 'Click on the tags below to insert variables into your home page title.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/search-appearance/views/GlobalSettings.vue:88
-	// Reference: /src/vue/pages/search-appearance/views/partials/TitleDescription.vue:63
+	// Reference: /src/vue/pages/search-appearance/views/partials/TitleDescription.vue:66
 	// Reference: /src/vue/standalone/post-settings/views/Facebook.vue:87
 	// Reference: /src/vue/standalone/post-settings/views/General.vue:127
 	// Reference: /src/vue/standalone/setup-wizard/views/SearchAppearance.vue:70
@@ -1644,7 +1644,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/components/common/core/HtmlTagsEditor.vue:68
 	__( 'Click on the tags below to insert variables into your template.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/pages/search-appearance/views/partials/TitleDescription.vue:61
+	// Reference: /src/vue/pages/search-appearance/views/partials/TitleDescription.vue:64
 	// Reference: /src/vue/standalone/post-settings/views/General.vue:125
 	__( 'Click on the tags below to insert variables into your title.', 'all-in-one-seo-pack' ),
 
@@ -1942,7 +1942,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/classes/SiteAnalysis.js:362
 	__( 'CSS:', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/components/common/core/wp/Table.vue:151
+	// Reference: /src/vue/components/common/core/wp/Table.vue:157
 	// Reference: /src/vue/pages/tools/views/partials/ExportContents.vue:71
 	__( 'CSV', 'all-in-one-seo-pack' ),
 
@@ -2196,7 +2196,7 @@ $generated_i18n_strings = [
 	__( 'Delete Rule', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/sitemaps/views/AdditionalPages.vue:81
-	__( 'Delete Selected Pages', 'all-in-one-seo-pack' ),
+	__( 'Delete selected pages', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/plugins/constants.js:1486
 	__( 'Delivery Event', 'all-in-one-seo-pack' ),
@@ -4064,7 +4064,7 @@ $generated_i18n_strings = [
 	__( 'Item Page', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/components/common/core/wp/Pagination.vue:25
-	// Reference: /src/vue/components/common/core/wp/Table.vue:149
+	// Reference: /src/vue/components/common/core/wp/Table.vue:155
 	__( 'items', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/components/common/core/wp/ItemsPerPage.vue:13
@@ -4137,7 +4137,7 @@ $generated_i18n_strings = [
 	__( 'Keyword Tracking is a %1$s Feature', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/search-appearance/views/GlobalSettings.vue:122
-	// Reference: /src/vue/pages/search-appearance/views/partials/Advanced.vue:60
+	// Reference: /src/vue/pages/search-appearance/views/partials/Advanced.vue:59
 	// Reference: /src/vue/pages/search-statistics/views/keyword-rank-tracker/partials/KeywordsGraphs.vue:48
 	// Reference: /src/vue/pages/search-statistics/views/keyword-rank-tracker/partials/Tabs.vue:28
 	// Reference: /src/vue/pages/search-statistics/views/partials/KeywordsDistributionGraph.vue:23
@@ -4525,7 +4525,7 @@ $generated_i18n_strings = [
 	__( 'Medical Page', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/search-appearance/views/GlobalSettings.vue:87
-	// Reference: /src/vue/pages/search-appearance/views/partials/TitleDescription.vue:62
+	// Reference: /src/vue/pages/search-appearance/views/partials/TitleDescription.vue:65
 	// Reference: /src/vue/standalone/post-settings/views/General.vue:126
 	// Reference: /src/vue/standalone/setup-wizard/views/SearchAppearance.vue:72
 	__( 'Meta Description', 'all-in-one-seo-pack' ),
@@ -4860,7 +4860,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/classes/SiteAnalysis.js:176
 	__( 'No internal links were found on your page.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/components/common/core/wp/Table.vue:150
+	// Reference: /src/vue/components/common/core/wp/Table.vue:156
 	// Reference: /src/vue/pages/link-assistant/views/partials/overview/LinkingOpportunities.vue:31
 	// Reference: /src/vue/pages/link-assistant/views/partials/overview/MostLinkedDomains.vue:33
 	__( 'No items found.', 'all-in-one-seo-pack' ),
@@ -5904,7 +5904,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/plugins/constants.js:40
 	__( 'Remove', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/pages/search-appearance/views/partials/Advanced.vue:61
+	// Reference: /src/vue/pages/search-appearance/views/partials/Advanced.vue:60
 	__( 'Remove Category Base Prefix', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/standalone/post-settings/views/partials/general/FocusKeyphrase.vue:80
@@ -6511,11 +6511,11 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/plugins/constants.js:41
 	__( 'Show', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/pages/search-appearance/views/partials/Advanced.vue:83
-	// Translators: 1 - The plugin name ("All in One SEO")
+	// Reference: /src/vue/pages/search-appearance/views/partials/Advanced.vue:82
+	// Translators: 1 - The plugin short name ("AIOSEO").
 	__( 'Show %1$s Meta Box', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/pages/search-appearance/views/partials/Advanced.vue:76
+	// Reference: /src/vue/pages/search-appearance/views/partials/Advanced.vue:75
 	// Translators: 1 - The type of page (Post, Page, Category, Tag, etc.).
 	__( 'Show %1$s Thumbnail in Google Custom Search', 'all-in-one-seo-pack' ),
 
@@ -6527,9 +6527,6 @@ $generated_i18n_strings = [
 
 	// Reference: /src/vue/pages/settings/views/Breadcrumbs.vue:106
 	__( 'Show current item', 'all-in-one-seo-pack' ),
-
-	// Reference: /src/vue/pages/search-appearance/views/partials/Advanced.vue:59
-	__( 'Show Date in Google Preview', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/social-networks/views/Facebook.vue:112
 	__( 'Show Facebook Author', 'all-in-one-seo-pack' ),
@@ -6543,7 +6540,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/standalone/blocks/opening-hours/OpeningHoursSidebar.vue:28
 	__( 'Show Icons', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/pages/search-appearance/views/partials/TitleDescription.vue:60
+	// Reference: /src/vue/pages/search-appearance/views/partials/TitleDescription.vue:63
 	__( 'Show in Search Results', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/standalone/blocks/location-map/LocationMapSidebar.vue:29
@@ -8952,7 +8949,7 @@ $generated_i18n_strings = [
 	// Translators: 1 - Focus Keyphrase or Keyphrase.
 	__( 'Your %1$s does not appear in the first paragraph. Make sure the topic is clear immediately.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/pages/search-appearance/views/partials/TitleDescription.vue:101
+	// Reference: /src/vue/pages/search-appearance/views/partials/TitleDescription.vue:104
 	// Translators: 1 - The plural name of the content type (e.g. "Posts" or "Categories").
 	__( 'Your %1$s will be noindexed and excluded from the sitemap so that search engines ignore them. You can still control how their page title looks like below.', 'all-in-one-seo-pack' ),
 

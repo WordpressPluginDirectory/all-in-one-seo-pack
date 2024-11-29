@@ -2,6 +2,7 @@
 namespace AIOSEO\Plugin\Common\Main;
 
 use AIOSEO\Plugin\Common\Models;
+use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -401,7 +402,8 @@ abstract class Filters {
 			'elementor_library',
 			'redirect_rule', // Safe Redirect Manager
 			'seedprod',
-			'tcb_lightbox'
+			'tcb_lightbox',
+			BuddyPressIntegration::getEmailCptSlug()
 		];
 
 		foreach ( $postTypes as $index => $postType ) {

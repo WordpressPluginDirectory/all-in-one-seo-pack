@@ -64,6 +64,15 @@ class Standalone {
 	public $userProfileTab = null;
 
 	/**
+	 * BuddyPress class instance.
+	 *
+	 * @since 4.7.6
+	 *
+	 * @var BuddyPress\BuddyPress
+	 */
+	public $buddyPress = null;
+
+	/**
 	 * List of page builder integration class instances.
 	 *
 	 * @since 4.2.7
@@ -93,6 +102,7 @@ class Standalone {
 		$this->setupWizard      = new SetupWizard();
 		$this->primaryTerm      = aioseo()->pro ? new ProStandalone\PrimaryTerm() : new PrimaryTerm();
 		$this->userProfileTab   = new UserProfileTab();
+		$this->buddyPress       = new BuddyPress\BuddyPress();
 
 		aioseo()->pro ? new ProStandalone\DetailsColumn() : new DetailsColumn();
 

@@ -1,6 +1,8 @@
 <?php
 namespace AIOSEO\Plugin\Common;
 
+use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
+
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -107,7 +109,20 @@ class Rss {
 	 * @return void
 	 */
 	public function disableFeeds() {
-		// This should only run if we are trying to parse a feed.
+		$archives = aioseo()->options->searchAppearance->advanced->crawlCleanup->feeds->archives->included;
+
+		if ( BuddyPressIntegration::isComponentPage() ) {
+			list( $postType, $suffix ) = explode( '_', aioseo()->standalone->buddyPress->component->templateType );
+
+			if (
+				'feed' === $suffix &&
+				! aioseo()->options->searchAppearance->advanced->crawlCleanup->feeds->archives->all &&
+				! in_array( $postType, $archives, true )
+			) {
+				$this->redirectRssFeed( BuddyPressIntegration::getComponentArchiveUrl( 'activity' ) );
+			}
+		}
+
 		if ( ! is_feed() ) {
 			return;
 		}
@@ -191,7 +206,6 @@ class Rss {
 		}
 
 		// All post types.
-		$archives = aioseo()->options->searchAppearance->advanced->crawlCleanup->feeds->archives->included;
 		$postType = $this->getTheQueriedPostType();
 		if (
 			! aioseo()->options->searchAppearance->advanced->crawlCleanup->feeds->archives->all &&
