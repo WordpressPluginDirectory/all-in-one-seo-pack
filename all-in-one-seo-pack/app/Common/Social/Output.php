@@ -1,12 +1,12 @@
 <?php
 namespace AIOSEO\Plugin\Common\Social;
 
-use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
-
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
 
 /**
  * Outputs our social meta.

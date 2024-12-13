@@ -538,7 +538,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/standalone/redirects/add-redirect/App.vue:31
 	__( 'Add a Redirect', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/standalone/post-settings/views/partials/general/AdditionalKeyphrases.vue:37
+	// Reference: /src/vue/standalone/post-settings/views/partials/general/AdditionalKeyphrases.vue:41
 	__( 'Add Additional Keyphrases', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/settings/views/RssContent.vue:47
@@ -602,10 +602,10 @@ $generated_i18n_strings = [
 	__( 'Additional Data', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/standalone/post-settings/views/General.vue:130
-	// Reference: /src/vue/standalone/post-settings/views/partials/general/AdditionalKeyphrases.vue:36
+	// Reference: /src/vue/standalone/post-settings/views/partials/general/AdditionalKeyphrases.vue:40
 	__( 'Additional Keyphrases', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/standalone/post-settings/views/partials/general/AdditionalKeyphrases.vue:41
+	// Reference: /src/vue/standalone/post-settings/views/partials/general/AdditionalKeyphrases.vue:45
 	// Translators: 1 - "Pro" string, 2 - "Learn more link".
 	__( 'Additional Keyphrases are a %1$s feature. %2$s', 'all-in-one-seo-pack' ),
 
@@ -854,7 +854,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/components/common/core/FeatureCard.vue:81
 	__( 'An error occurred while changing the addon status. Please try again or contact support for more information.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/standalone/post-settings/views/partials/general/FocusKeyphrase.vue:137
+	// Reference: /src/vue/standalone/post-settings/views/partials/general/FocusKeyphrase.vue:142
 	__( 'An error occurred while fetching keyphrases. Please try again later.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/tools/views/partials/ImportOthers.vue:104
@@ -1385,7 +1385,7 @@ $generated_i18n_strings = [
 	// Translators: 1 - The plugin short name ("AIOEO").
 	__( 'Browse documentation, reference material, and tutorials for %1$s.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/composables/Wizard.js:169
+	// Reference: /src/vue/composables/Wizard.js:177
 	// Translators: 1 - Plugin short name ("AIOSEO").
 	__( 'Build a Better %1$s', 'all-in-one-seo-pack' ),
 
@@ -1664,7 +1664,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/components/common/core/Help.vue:43
 	__( 'Close', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/composables/Wizard.js:166
+	// Reference: /src/vue/composables/Wizard.js:174
 	__( 'Close and Exit Wizard Without Saving', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/local-seo/views/lite/opening-hours/Blur.vue:39
@@ -2510,6 +2510,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/pages/tools/views/SystemStatus.vue:43
 	__( 'Email Debug Information', 'all-in-one-seo-pack' ),
 
+	// Reference: /src/vue/composables/Wizard.js:159
 	// Reference: /src/vue/pages/settings/views/Advanced.vue:144
 	__( 'Email Reports', 'all-in-one-seo-pack' ),
 
@@ -2547,6 +2548,9 @@ $generated_i18n_strings = [
 
 	// Reference: /src/vue/pages/settings/views/partials/Advanced/EmailSummary.vue:47
 	__( 'Enable email reports to receive a digest of the most important SEO updates for your site, right in your inbox.', 'all-in-one-seo-pack' ),
+
+	// Reference: /src/vue/standalone/setup-wizard/views/SearchAppearance.vue:80
+	__( 'Enable Email reports?', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/social-networks/views/Facebook.vue:76
 	__( 'Enable Open Graph Markup', 'all-in-one-seo-pack' ),
@@ -3139,7 +3143,7 @@ $generated_i18n_strings = [
 	// Translators: 1 - Plugin short name ("AIOSEO").
 	__( 'Get helpful suggestions from %1$s on how to optimize your website content, so you can rank higher in search results.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/composables/Wizard.js:174
+	// Reference: /src/vue/composables/Wizard.js:182
 	// Translators: 1 - Plugin short name ("AIOSEO").
 	__( 'Get improved features and faster fixes by sharing non-sensitive data via usage tracking that shows us how %1$s is being used. No personal data is tracked or stored.', 'all-in-one-seo-pack' ),
 
@@ -3236,7 +3240,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/composables/Wizard.js:63
 	__( 'Globally control the title, alt text, description and filename for attachment pages & images that are embedded in your content.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/composables/Wizard.js:164
+	// Reference: /src/vue/composables/Wizard.js:172
 	__( 'Go Back', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/standalone/setup-wizard/views/Welcome.vue:44
@@ -3786,7 +3790,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/components/common/core/SeoSetup.vue:40
 	__( 'Improve SEO Rankings', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/standalone/post-settings/views/partials/general/AdditionalKeyphrases.vue:38
+	// Reference: /src/vue/standalone/post-settings/views/partials/general/AdditionalKeyphrases.vue:42
 	__( 'Improve your SEO rankings with additional keyphrases.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/about/views/AboutUs.vue:162
@@ -4912,7 +4916,7 @@ $generated_i18n_strings = [
 
 	// Reference: /src/vue/components/common/notifications/Review.vue:43
 	// Reference: /src/vue/components/common/notifications/Review2.vue:37
-	// Reference: /src/vue/composables/Wizard.js:177
+	// Reference: /src/vue/composables/Wizard.js:185
 	__( 'No thanks', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/app/tru-seo/analyzer/analysis/titleLength.js:26
@@ -6047,7 +6051,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/standalone/page-builders/thrive-architect/limit-modified-date.js:5
 	__( 'Save (Don\'t Modify Date)', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/composables/Wizard.js:165
+	// Reference: /src/vue/composables/Wizard.js:173
 	__( 'Save and Continue', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/components/common/core/PostColumn.vue:80
@@ -6618,7 +6622,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/composables/Wizard.js:21
 	__( 'Sitemaps are a list of all your content that search engines use when they crawl your site.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/composables/Wizard.js:163
+	// Reference: /src/vue/composables/Wizard.js:171
 	__( 'Skip this Step', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/search-statistics/views/partials/GraphDecay.vue:37
@@ -6765,6 +6769,9 @@ $generated_i18n_strings = [
 
 	// Reference: /src/vue/pages/about/views/AboutUs.vue:82
 	__( 'Status:', 'all-in-one-seo-pack' ),
+
+	// Reference: /src/vue/composables/Wizard.js:160
+	__( 'Stay ahead in SEO with our new email digest! Get the latest tips, trends, and tools delivered right to your inbox, helping you optimize smarter and faster. Enable it today and never miss an update that can take your rankings to the next level.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/components/common/core/SeoSetup.vue:50
 	// Reference: /src/vue/components/common/wizard/Steps.vue:16
@@ -8750,7 +8757,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/standalone/setup-wizard/views/SmartRecommendations.vue:77
 	__( 'Yes, count me in', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/composables/Wizard.js:178
+	// Reference: /src/vue/composables/Wizard.js:186
 	__( 'Yes, count me in!', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/components/common/core/ResetSettings.vue:54
@@ -8871,7 +8878,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/pages/dashboard/views/Main.vue:167
 	__( 'You have 1 more notification', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/standalone/post-settings/views/partials/general/FocusKeyphrase.vue:135
+	// Reference: /src/vue/standalone/post-settings/views/partials/general/FocusKeyphrase.vue:140
 	__( 'You have exceeded the limit for requests. Please try again later.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/standalone/post-settings/views/partials/general/FocusKeyphrase.vue:112
@@ -8898,6 +8905,11 @@ $generated_i18n_strings = [
 
 	// Reference: /src/vue/composables/License.js:11
 	__( 'You have not yet added a valid license key.', 'all-in-one-seo-pack' ),
+
+	// Reference: /src/vue/standalone/post-settings/views/partials/general/AdditionalKeyphrases.vue:51
+	// Reference: /src/vue/standalone/post-settings/views/partials/general/FocusKeyphrase.vue:122
+	// Translators: 1 - Number of maximum keywords.
+	__( 'You have reached the maximum of %1$s additional keyphrases.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/components/common/core/headline/Result.vue:134
 	// Reference: /src/vue/standalone/headline-analyzer/components/CharacterCount.vue:64

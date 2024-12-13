@@ -1,13 +1,12 @@
 <?php
-
 namespace AIOSEO\Plugin\Common\Standalone\BuddyPress;
-
-use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
 
 /**
  * Handles the BuddyPress integration with AIOSEO.

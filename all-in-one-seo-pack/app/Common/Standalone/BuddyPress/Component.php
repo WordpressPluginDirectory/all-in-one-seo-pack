@@ -2,13 +2,13 @@
 
 namespace AIOSEO\Plugin\Common\Standalone\BuddyPress;
 
-use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
-use AIOSEO\Plugin\Common\Schema\Graphs as CommonGraphs;
-
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
+use AIOSEO\Plugin\Common\Schema\Graphs as CommonGraphs;
 
 /**
  * BuddyPress Component class.

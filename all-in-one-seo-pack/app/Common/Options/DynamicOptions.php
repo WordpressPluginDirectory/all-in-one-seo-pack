@@ -1,12 +1,12 @@
 <?php
 namespace AIOSEO\Plugin\Common\Options;
 
-use AIOSEO\Plugin\Common\Traits;
-
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+use AIOSEO\Plugin\Common\Traits;
 
 /**
  * Handles the dynamic options.

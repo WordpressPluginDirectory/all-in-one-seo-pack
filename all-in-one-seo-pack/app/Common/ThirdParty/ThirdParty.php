@@ -1,6 +1,11 @@
 <?php
 namespace AIOSEO\Plugin\Common\ThirdParty;
 
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Instantiates our third-party classes.
  *

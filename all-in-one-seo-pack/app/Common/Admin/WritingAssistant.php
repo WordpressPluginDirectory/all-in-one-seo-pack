@@ -64,7 +64,7 @@ class WritingAssistant {
 			return;
 		}
 
-        // Ignore certain plugins.
+		// Ignore certain plugins.
 		if (
 			aioseo()->thirdParty->webStories->isPluginActive() &&
 			'web-story' === $postType

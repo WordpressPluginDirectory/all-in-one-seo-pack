@@ -1,13 +1,13 @@
 <?php
 namespace AIOSEO\Plugin\Common\Standalone;
 
-use AIOSEO\Plugin\Common\Models;
-use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
-
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+use AIOSEO\Plugin\Common\Models;
+use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
 
 /**
  * Handles the SEO Preview feature on the front-end.
@@ -171,7 +171,7 @@ class SeoPreview {
 				is_object( $wpObject ) &&
 				is_object( $labels )
 			) {
-				$data['editObjectBtnText']      = sprintf(
+				$data['editObjectBtnText'] = sprintf(
 					// Translators: 1 - A noun for something that's being edited ("Post", "Page", "Article", "Product", etc.).
 					esc_html__( 'Edit %1$s', 'all-in-one-seo-pack' ),
 					$labels->singular_name

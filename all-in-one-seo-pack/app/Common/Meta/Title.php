@@ -1,12 +1,12 @@
 <?php
 namespace AIOSEO\Plugin\Common\Meta;
 
-use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
-
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
 
 /**
  * Handles the title.
@@ -239,7 +239,7 @@ class Title {
 		$dynamicOptions = aioseo()->dynamicOptions->noConflict();
 		if ( ! $title && $dynamicOptions->searchAppearance->taxonomies->has( $term->taxonomy ) ) {
 			$newTitle = aioseo()->dynamicOptions->searchAppearance->taxonomies->{$term->taxonomy}->title;
-			$newTitle = preg_replace( '/#taxonomy_title/', aioseo()->helpers->escapeRegexReplacement( $term->name ), $newTitle );
+			$newTitle = preg_replace( '/#taxonomy_title/', aioseo()->helpers->escapeRegexReplacement( $term->name ), (string) $newTitle );
 			$title    = $this->helpers->prepare( $newTitle, $term->term_id, $default );
 		}
 

@@ -1,12 +1,12 @@
 <?php
 namespace AIOSEO\Plugin\Common\Meta;
 
-use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
-
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
 
 /**
  * Handles the robots meta tag.

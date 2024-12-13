@@ -1,6 +1,11 @@
 <?php
 namespace AIOSEO\Plugin\Common\ThirdParty;
 
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Integrates with Google Web Stories plugin.
  *

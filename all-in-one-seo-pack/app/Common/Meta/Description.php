@@ -1,12 +1,12 @@
 <?php
 namespace AIOSEO\Plugin\Common\Meta;
 
-use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
-
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
 
 /**
  * Handles the (Open Graph) description.
@@ -185,7 +185,7 @@ class Description {
 			if ( in_array( 'descriptionFormat', aioseo()->internalOptions->deprecatedOptions, true ) ) {
 				$descriptionFormat = aioseo()->options->deprecated->searchAppearance->global->descriptionFormat;
 				if ( $descriptionFormat ) {
-					$description = preg_replace( '/#description/', $description, $descriptionFormat );
+					$description = preg_replace( '/#description/', $description, (string) $descriptionFormat );
 				}
 			}
 		}

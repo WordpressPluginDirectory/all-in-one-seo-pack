@@ -1,12 +1,12 @@
 <?php
 namespace AIOSEO\Plugin\Common\Sitemap;
 
-use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
-
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+use AIOSEO\Plugin\Common\Integrations\BuddyPress as BuddyPressIntegration;
 
 /**
  * Determines which content should be included in the sitemap.
@@ -476,7 +476,7 @@ class Content {
 
 		if ( aioseo()->options->sitemap->general->indexes && $shouldChunk ) {
 			$entries = aioseo()->sitemap->helpers->chunkEntries( $entries );
-			$entries = $entries[ aioseo()->sitemap->pageNumber ];
+			$entries = $entries[ aioseo()->sitemap->pageNumber ] ?? [];
 		}
 
 		return $entries;
