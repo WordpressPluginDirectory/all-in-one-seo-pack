@@ -4,7 +4,7 @@ Tags: SEO, Google Search Console, XML Sitemap, meta description, schema
 Tested up to: 6.7
 Requires at least: 5.3
 Requires PHP: 7.0
-Stable tag: 4.7.7.1
+Stable tag: 4.7.7.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -25,7 +25,7 @@ We have AI SEO features that helps you optimize SEO rankings using ChatGPT (Open
 
 Here's why smart business owners, SEO experts, marketers, and developers love AIOSEO, and you will too!
 
-[youtube https://youtu.be/AZpXSrZDbW4]
+[youtube https://youtu.be/UbOYEEIvXvY]
 
 ### What Makes AIOSEO Better than Other WordPress SEO Plugins ###
 
@@ -225,6 +225,10 @@ AIOSEO&reg; is a registered trademark of Semper Plugins LLC. When writing about 
 * AISEO (incorrect)
 
 == Changelog ==
+
+**New in Version 4.7.7.2**
+
+* Fixed: PHP error due to race condition when Writing Assistant fails to fetch default user options.
 
 **New in Version 4.7.7.1**
 
@@ -463,6 +467,6 @@ Additionally, AIOSEO can also provide you with data on the most frequently used 
 
 == Upgrade Notice ==
 
-= 4.7.7.1 =
+= 4.7.7.2 =
 
 This update adds major improvements and bug fixes.
