@@ -162,6 +162,7 @@ return array(
     'AIOSEO\\Plugin\\Common\\Schema\\Graphs\\WebSite' => $baseDir . '/app/Common/Schema/Graphs/WebSite.php',
     'AIOSEO\\Plugin\\Common\\Schema\\Helpers' => $baseDir . '/app/Common/Schema/Helpers.php',
     'AIOSEO\\Plugin\\Common\\Schema\\Schema' => $baseDir . '/app/Common/Schema/Schema.php',
+    'AIOSEO\\Plugin\\Common\\SearchCleanup\\SearchCleanup' => $baseDir . '/app/Common/SearchCleanup/SearchCleanup.php',
     'AIOSEO\\Plugin\\Common\\SearchStatistics\\Api\\Api' => $baseDir . '/app/Common/SearchStatistics/Api/Api.php',
     'AIOSEO\\Plugin\\Common\\SearchStatistics\\Api\\Auth' => $baseDir . '/app/Common/SearchStatistics/Api/Auth.php',
     'AIOSEO\\Plugin\\Common\\SearchStatistics\\Api\\Listener' => $baseDir . '/app/Common/SearchStatistics/Api/Listener.php',
