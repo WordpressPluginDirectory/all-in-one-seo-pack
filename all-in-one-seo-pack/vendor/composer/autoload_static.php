@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit738d3d04a0bf0429b6fc3905a3a99edb
+class ComposerStaticInited5bdfa8050be90351fb67be3459a113
 {
     public static $prefixLengthsPsr4 = array (
         'A' => 
@@ -110,6 +110,7 @@ class ComposerStaticInit738d3d04a0bf0429b6fc3905a3a99edb
         'AIOSEO\\Plugin\\Common\\ImportExport\\YoastSeo\\SocialMeta' => __DIR__ . '/../..' . '/app/Common/ImportExport/YoastSeo/SocialMeta.php',
         'AIOSEO\\Plugin\\Common\\ImportExport\\YoastSeo\\UserMeta' => __DIR__ . '/../..' . '/app/Common/ImportExport/YoastSeo/UserMeta.php',
         'AIOSEO\\Plugin\\Common\\ImportExport\\YoastSeo\\YoastSeo' => __DIR__ . '/../..' . '/app/Common/ImportExport/YoastSeo/YoastSeo.php',
+        'AIOSEO\\Plugin\\Common\\Integrations\\BbPress' => __DIR__ . '/../..' . '/app/Common/Integrations/BbPress.php',
         'AIOSEO\\Plugin\\Common\\Integrations\\BuddyPress' => __DIR__ . '/../..' . '/app/Common/Integrations/BuddyPress.php',
         'AIOSEO\\Plugin\\Common\\Integrations\\Semrush' => __DIR__ . '/../..' . '/app/Common/Integrations/Semrush.php',
         'AIOSEO\\Plugin\\Common\\Integrations\\WpCode' => __DIR__ . '/../..' . '/app/Common/Integrations/WpCode.php',
@@ -122,6 +123,7 @@ class ComposerStaticInit738d3d04a0bf0429b6fc3905a3a99edb
         'AIOSEO\\Plugin\\Common\\Main\\PreUpdates' => __DIR__ . '/../..' . '/app/Common/Main/PreUpdates.php',
         'AIOSEO\\Plugin\\Common\\Main\\QueryArgs' => __DIR__ . '/../..' . '/app/Common/Main/QueryArgs.php',
         'AIOSEO\\Plugin\\Common\\Main\\Title' => __DIR__ . '/../..' . '/app/Common/Main/Title.php',
+        'AIOSEO\\Plugin\\Common\\Main\\Uninstall' => __DIR__ . '/../..' . '/app/Common/Main/Uninstall.php',
         'AIOSEO\\Plugin\\Common\\Main\\Updates' => __DIR__ . '/../..' . '/app/Common/Main/Updates.php',
         'AIOSEO\\Plugin\\Common\\Meta\\Amp' => __DIR__ . '/../..' . '/app/Common/Meta/Amp.php',
         'AIOSEO\\Plugin\\Common\\Meta\\Description' => __DIR__ . '/../..' . '/app/Common/Meta/Description.php',
@@ -226,6 +228,8 @@ class ComposerStaticInit738d3d04a0bf0429b6fc3905a3a99edb
         'AIOSEO\\Plugin\\Common\\Social\\Social' => __DIR__ . '/../..' . '/app/Common/Social/Social.php',
         'AIOSEO\\Plugin\\Common\\Social\\Twitter' => __DIR__ . '/../..' . '/app/Common/Social/Twitter.php',
         'AIOSEO\\Plugin\\Common\\Standalone\\AdminBarNoindexWarning' => __DIR__ . '/../..' . '/app/Common/Standalone/AdminBarNoindexWarning.php',
+        'AIOSEO\\Plugin\\Common\\Standalone\\BbPress\\BbPress' => __DIR__ . '/../..' . '/app/Common/Standalone/BbPress/BbPress.php',
+        'AIOSEO\\Plugin\\Common\\Standalone\\BbPress\\Component' => __DIR__ . '/../..' . '/app/Common/Standalone/BbPress/Component.php',
         'AIOSEO\\Plugin\\Common\\Standalone\\Blocks\\Blocks' => __DIR__ . '/../..' . '/app/Common/Standalone/Blocks/Blocks.php',
         'AIOSEO\\Plugin\\Common\\Standalone\\Blocks\\FaqPage' => __DIR__ . '/../..' . '/app/Common/Standalone/Blocks/FaqPage.php',
         'AIOSEO\\Plugin\\Common\\Standalone\\Blocks\\TableOfContents' => __DIR__ . '/../..' . '/app/Common/Standalone/Blocks/TableOfContents.php',
@@ -432,10 +436,10 @@ class ComposerStaticInit738d3d04a0bf0429b6fc3905a3a99edb
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit738d3d04a0bf0429b6fc3905a3a99edb::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit738d3d04a0bf0429b6fc3905a3a99edb::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit738d3d04a0bf0429b6fc3905a3a99edb::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit738d3d04a0bf0429b6fc3905a3a99edb::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInited5bdfa8050be90351fb67be3459a113::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInited5bdfa8050be90351fb67be3459a113::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInited5bdfa8050be90351fb67be3459a113::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInited5bdfa8050be90351fb67be3459a113::$classMap;
 
         }, null, ClassLoader::class);
     }
