@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb81e33b63ccff4f78d4c57c91afc6e94
+class ComposerStaticInit8c1456a2a1e724eed7903904181c79de
 {
     public static $prefixLengthsPsr4 = array (
         'P' => 
@@ -76,8 +76,10 @@ class ComposerStaticInitb81e33b63ccff4f78d4c57c91afc6e94
         'AIOSEO\\Plugin\\Common\\Admin\\Usage' => __DIR__ . '/../..' . '/app/Common/Admin/Usage.php',
         'AIOSEO\\Plugin\\Common\\Admin\\WritingAssistant' => __DIR__ . '/../..' . '/app/Common/Admin/WritingAssistant.php',
         'AIOSEO\\Plugin\\Common\\Ai\\Ai' => __DIR__ . '/../..' . '/app/Common/Ai/Ai.php',
+        'AIOSEO\\Plugin\\Common\\Ai\\Assistant' => __DIR__ . '/../..' . '/app/Common/Ai/Assistant.php',
         'AIOSEO\\Plugin\\Common\\Ai\\Image' => __DIR__ . '/../..' . '/app/Common/Ai/Image.php',
         'AIOSEO\\Plugin\\Common\\Api\\Ai' => __DIR__ . '/../..' . '/app/Common/Api/Ai.php',
+        'AIOSEO\\Plugin\\Common\\Api\\AiInsights' => __DIR__ . '/../..' . '/app/Common/Api/AiInsights.php',
         'AIOSEO\\Plugin\\Common\\Api\\Analyze' => __DIR__ . '/../..' . '/app/Common/Api/Analyze.php',
         'AIOSEO\\Plugin\\Common\\Api\\Api' => __DIR__ . '/../..' . '/app/Common/Api/Api.php',
         'AIOSEO\\Plugin\\Common\\Api\\Connect' => __DIR__ . '/../..' . '/app/Common/Api/Connect.php',
@@ -174,6 +176,7 @@ class ComposerStaticInitb81e33b63ccff4f78d4c57c91afc6e94
         'AIOSEO\\Plugin\\Common\\Migration\\Sitemap' => __DIR__ . '/../..' . '/app/Common/Migration/Sitemap.php',
         'AIOSEO\\Plugin\\Common\\Migration\\SocialMeta' => __DIR__ . '/../..' . '/app/Common/Migration/SocialMeta.php',
         'AIOSEO\\Plugin\\Common\\Migration\\Wpml' => __DIR__ . '/../..' . '/app/Common/Migration/Wpml.php',
+        'AIOSEO\\Plugin\\Common\\Models\\AiInsightsKeywordReport' => __DIR__ . '/../..' . '/app/Common/Models/AiInsightsKeywordReport.php',
         'AIOSEO\\Plugin\\Common\\Models\\CrawlCleanupBlockedArg' => __DIR__ . '/../..' . '/app/Common/Models/CrawlCleanupBlockedArg.php',
         'AIOSEO\\Plugin\\Common\\Models\\CrawlCleanupLog' => __DIR__ . '/../..' . '/app/Common/Models/CrawlCleanupLog.php',
         'AIOSEO\\Plugin\\Common\\Models\\Model' => __DIR__ . '/../..' . '/app/Common/Models/Model.php',
@@ -498,10 +501,10 @@ class ComposerStaticInitb81e33b63ccff4f78d4c57c91afc6e94
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitb81e33b63ccff4f78d4c57c91afc6e94::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitb81e33b63ccff4f78d4c57c91afc6e94::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitb81e33b63ccff4f78d4c57c91afc6e94::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitb81e33b63ccff4f78d4c57c91afc6e94::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit8c1456a2a1e724eed7903904181c79de::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit8c1456a2a1e724eed7903904181c79de::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit8c1456a2a1e724eed7903904181c79de::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit8c1456a2a1e724eed7903904181c79de::$classMap;
 
         }, null, ClassLoader::class);
     }
