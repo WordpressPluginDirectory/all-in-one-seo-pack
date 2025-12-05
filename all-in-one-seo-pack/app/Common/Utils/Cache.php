@@ -89,17 +89,20 @@ class Cache {
 			return self::$cache[ $key ];
 		}
 
-		// Are we searching for a group of keys?
-		$isLikeGet = preg_match( '/%/', (string) $key );
-
 		$result = aioseo()->core->db
 			->start( $this->table )
 			->select( '`key`, `value`, `is_object`' )
 			->whereRaw( '( `expiration` IS NULL OR `expiration` > \'' . aioseo()->helpers->timeToMysql( time() ) . '\' )' );
 
-		$isLikeGet ?
-			$result->whereRaw( '`key` LIKE \'' . $key . '\'' ) :
+		// Check if we're supposed to do a LIKE get.
+		$isLikeGet = preg_match( '/%/', (string) $key );
+
+		if ( $isLikeGet ) {
+			$result->whereLike( 'key', $key, true );
+		} else {
+			$key = esc_sql( $key );
 			$result->where( 'key', $key );
+		}
 
 		$result->output( ARRAY_A )->run();
 
@@ -294,7 +297,7 @@ class Cache {
 		$prefix = $this->prepareKey( $prefix );
 
 		aioseo()->core->db->delete( $this->table )
-			->whereRaw( "`key` LIKE '$prefix%'" )
+			->whereLike( 'key', $prefix . '%', true )
 			->run();
 
 		$this->clearStaticPrefix( $prefix );
