@@ -4,7 +4,7 @@ Tags: SEO, Google Search Console, XML Sitemap, meta description, schema
 Tested up to: 6.9
 Requires at least: 5.7
 Requires PHP: 7.2
-Stable tag: 4.9.1.1
+Stable tag: 4.9.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -231,6 +231,11 @@ AIOSEO&reg; is a registered trademark of Semper Plugins LLC. When writing about 
 
 == Changelog ==
 
+**New in Version 4.9.2**
+
+* New: Page Builder Integrations for Bricks & Oxygen - You can now seamlessly control your SEO settings directly within the visual builders of Bricks and Oxygen and analyze their content with TruSEO.
+* Fixed: Browser alert incorrectly appearing in Classic Editor after page reload when Focus Keyword is set.
+
 **New in Version 4.9.1.1**
 
 * New: Users using AIOSEO, Broken Link Checker and Link Assistant now see their broken links count in the AIOSEO Details post column.
@@ -385,6 +390,6 @@ Additionally, AIOSEO can also provide you with data on the most frequently used 
 
 == Upgrade Notice ==
 
-= 4.9.1.1 =
+= 4.9.2 =
 
 This update adds major improvements and bug fixes.
