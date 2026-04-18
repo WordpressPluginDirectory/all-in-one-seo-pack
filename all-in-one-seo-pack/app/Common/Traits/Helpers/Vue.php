@@ -47,11 +47,12 @@ trait Vue {
 		$this->setSearchAppearanceData();
 		$this->setSocialNetworksData();
 		$this->setSeoRevisionsData();
+		$this->setAiBulkGenerateData();
 		$this->setToolsOrSettingsData();
-		$this->setPageBuilderData();
 		$this->setWritingAssistantData();
 		$this->setBreadcrumbsData();
 		$this->setSeoAnalyzerData();
+		$this->setAiData();
 		$this->setAiAssistantData();
 		$this->setAiImageGeneratorData();
 		$this->setAiInsightsData();
@@ -70,9 +71,11 @@ trait Vue {
 	 * @return void
 	 */
 	private function setInitialData() {
-		$screen           = aioseo()->helpers->getCurrentScreen();
-		$isStaticHomePage = 'page' === get_option( 'show_on_front' );
-		$staticHomePage   = intval( get_option( 'page_on_front' ) );
+		$screen             = aioseo()->helpers->getCurrentScreen();
+		$isStaticHomePage   = 'page' === get_option( 'show_on_front' );
+		$staticHomePage     = intval( get_option( 'page_on_front' ) );
+		$themeVersion       = aioseo()->helpers->getThemeVersion();
+		$themeParentVersion = aioseo()->helpers->getThemeVersion( true );
 
 		$this->data = [
 			'page'               => $this->args['page'],
@@ -84,6 +87,10 @@ trait Vue {
 			],
 			'internalOptions'    => aioseo()->internalOptions->all(),
 			'options'            => aioseo()->options->all(),
+			'sensitiveOptions'   => array_merge(
+				aioseo()->sensitiveOptions->allHas(),
+				! empty( aioseo()->networkSensitiveOptions ) ? aioseo()->networkSensitiveOptions->allHas() : []
+			),
 			'dynamicOptions'     => aioseo()->dynamicOptions->all(),
 			'deprecatedOptions'  => aioseo()->internalOptions->getAllDeprecatedOptions( true ),
 			'settings'           => aioseo()->settings ? aioseo()->settings->all() : [],
@@ -138,6 +145,7 @@ trait Vue {
 					'wizard'           => admin_url( 'index.php?page=aioseo-setup-wizard' ),
 					'networkSettings'  => is_network_admin() ? network_admin_url( 'admin.php?page=aioseo-settings' ) : '',
 					'seoRevisions'     => admin_url( 'admin.php?page=aioseo-seo-revisions' ),
+					'aiBulkGenerate'   => admin_url( 'admin.php?page=aioseo-ai-bulk-generate' )
 				],
 				'admin'             => [
 					'widgets'          => admin_url( 'widgets.php' ),
@@ -208,7 +216,10 @@ trait Vue {
 			],
 			'integration'        => $this->args['integration'],
 			'theme'              => [
-				'features' => aioseo()->helpers->getThemeFeatures()
+				'features'        => aioseo()->helpers->getThemeFeatures(),
+				'version'         => $themeVersion, // The active skin/child version
+				'parentVersion'   => $themeParentVersion, // The parent version (nullable)
+				'templateVersion' => $themeParentVersion ?? $themeVersion // Always the framework/base version
 			]
 		];
 
@@ -523,6 +534,73 @@ trait Vue {
 	}
 
 	/**
+	 * Set Vue AI bulk generate data.
+	 *
+	 * @since 4.9.6
+	 *
+	 * @return void
+	 */
+	private function setAiBulkGenerateData() {
+		if ( 'ai-bulk-generate' !== $this->args['page'] ) {
+			return;
+		}
+
+		// phpcs:disable HM.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Recommended
+		$ids = [];
+		if ( ! empty( $_GET['ids'] ) ) {
+			$ids = array_map( 'intval', explode( ',', sanitize_text_field( wp_unslash( $_GET['ids'] ) ) ) );
+		}
+
+		$type = 'title';
+		if ( ! empty( $_GET['type'] ) && in_array( $_GET['type'], [ 'title', 'description', 'alt' ], true ) ) {
+			$type = sanitize_text_field( wp_unslash( $_GET['type'] ) );
+		}
+		// phpcs:enable HM.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Recommended
+
+		$postType    = '';
+		$posts       = [];
+		if ( ! empty( $ids ) ) {
+			$isAlt       = 'alt' === $type;
+			$postObjects = get_posts( [
+				'post__in'               => $ids,
+				'post_type'              => 'any',
+				'post_status'            => 'any',
+				'posts_per_page'         => count( $ids ),
+				'orderby'                => 'post__in',
+				'update_post_meta_cache' => false,
+				'update_post_term_cache' => false
+			] );
+
+			if ( $isAlt ) {
+				// Prime meta cache to avoid N+1 queries in wp_get_attachment_image_url().
+				update_postmeta_cache( $ids );
+			}
+
+			if ( ! empty( $postObjects ) ) {
+				$postType = $postObjects[0]->post_type;
+			}
+
+			foreach ( $postObjects as $post ) {
+				// Intentionally missing the translation domain to use the WordPress core translation.
+				$data = [ 'title' => $post->post_title ?: __( '(no title)' ) ]; // phpcs:ignore AIOSEO.Wp.I18n.MissingArgDomain
+
+				if ( $isAlt ) {
+					$data['thumbnailUrl'] = wp_get_attachment_image_url( $post->ID, 'thumbnail' );
+				}
+
+				$posts[ $post->ID ] = $data;
+			}
+		}
+
+		$this->data['aiBulkGenerate'] = [
+			'ids'      => $ids,
+			'type'     => $type,
+			'postType' => $postType,
+			'posts'    => $posts
+		];
+	}
+
+	/**
 	 * Set Vue tools or settings data.
 	 *
 	 * @since 4.4.9
@@ -569,26 +647,6 @@ trait Vue {
 				'sites'   => aioseo()->helpers->getSites(),
 				'backups' => []
 			];
-		}
-	}
-
-	/**
-	 * Set Vue Page Builder data.
-	 *
-	 * @since   4.4.9
-	 * @version 4.5.2 Renamed.
-	 *
-	 * @return void
-	 */
-	private function setPageBuilderData() {
-		if ( empty( $this->args['integration'] ) ) {
-			return;
-		}
-
-		if ( 'divi' === $this->args['integration'] ) {
-			// This needs to be dropped in order to prevent JavaScript errors in Divi's visual builder.
-			// Some of the data from the site analysis can contain HTML tags, e.g. the search preview, and somehow that causes JSON.parse to fail on our localized Vue data.
-			unset( $this->data['internalOptions']['internal']['siteAnalysis'] );
 		}
 	}
 
@@ -710,6 +768,19 @@ trait Vue {
 	}
 
 	/**
+	 * Set Vue AI data.
+	 *
+	 * @since 4.9.6
+	 *
+	 * @return void
+	 */
+	private function setAiData() {
+		$this->data['ai'] = [
+			'options' => aioseo()->ai->options
+		];
+	}
+
+	/**
 	 * Set Vue AI Assistant data.
 	 *
 	 * @since 4.9.1
@@ -748,47 +819,6 @@ trait Vue {
 		}
 
 		return 'https://aioseo.com/';
-	}
-
-	/**
-	 * Clean sensitive data.
-	 *
-	 * @since 4.8.7
-	 *
-	 * @return void
-	 */
-	protected function cleanSensitiveData() {
-		// Hide Semrush tokens.
-		if ( ! empty( $this->data['internalOptions']['integrations']['semrush']['accessToken'] ) ) {
-			$this->data['internalOptions']['integrations']['semrush']['accessToken'] = '*****************';
-		}
-
-		if ( ! empty( $this->data['internalOptions']['integrations']['semrush']['refreshToken'] ) ) {
-			$this->data['internalOptions']['integrations']['semrush']['refreshToken'] = '*****************';
-		}
-
-		// Hide AI tokens.
-		if ( ! empty( $this->data['internalOptions']['internal']['ai']['accessToken'] ) ) {
-			$this->data['internalOptions']['internal']['ai']['accessToken'] = '*****************';
-		}
-
-		// Hide Search Statistics tokens.
-		if ( ! empty( $this->data['internalOptions']['internal']['searchStatistics']['profile']['key'] ) ) {
-			$this->data['internalOptions']['internal']['searchStatistics']['profile']['key'] = '*****************';
-		}
-
-		if ( ! empty( $this->data['internalOptions']['internal']['searchStatistics']['profile']['token'] ) ) {
-			$this->data['internalOptions']['internal']['searchStatistics']['profile']['token'] = '*****************';
-		}
-
-		if ( ! empty( $this->data['internalOptions']['internal']['searchStatistics']['trustToken'] ) ) {
-			$this->data['internalOptions']['internal']['searchStatistics']['trustToken'] = '*****************';
-		}
-
-		// Hide connect token.
-		if ( ! empty( $this->data['internalOptions']['internal']['siteAnalysis']['connectToken'] ) ) {
-			$this->data['internalOptions']['internal']['siteAnalysis']['connectToken'] = '*****************';
-		}
 	}
 
 	/**

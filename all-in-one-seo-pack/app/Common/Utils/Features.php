@@ -13,6 +13,15 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Features {
 	/**
+	 * The Action Scheduler action name for refreshing the features cache.
+	 *
+	 * @since 4.9.5.2
+	 *
+	 * @var string
+	 */
+	private $actionName = 'aioseo_features_refresh';
+
+	/**
 	 * The features URL.
 	 *
 	 * @since 4.3.0
@@ -20,6 +29,44 @@ class Features {
 	 * @var string
 	 */
 	protected $featuresUrl = 'https://licensing-cdn.aioseo.com/keys/lite/all-in-one-seo-pack-pro-features.json';
+
+	/**
+	 * Class constructor.
+	 *
+	 * @since 4.9.5.2
+	 */
+	public function __construct() {
+		add_action( 'admin_init', [ $this, 'scheduleRefresh' ] );
+		add_action( $this->actionName, [ $this, 'refresh' ] );
+	}
+
+	/**
+	 * Schedules the daily recurring features cache refresh.
+	 * Hooked into `admin_init` action hook.
+	 *
+	 * @since 4.9.5.2
+	 *
+	 * @return void
+	 */
+	public function scheduleRefresh() {
+		if ( aioseo()->actionScheduler->isScheduled( $this->actionName ) ) {
+			return;
+		}
+
+		aioseo()->actionScheduler->scheduleRecurrent( $this->actionName, 0, DAY_IN_SECONDS );
+	}
+
+	/**
+	 * Refreshes the features cache.
+	 * Hooked into `aioseo_features_refresh` action hook.
+	 *
+	 * @since 4.9.5.2
+	 *
+	 * @return void
+	 */
+	public function refresh() {
+		$this->getFeatures( true );
+	}
 
 	/**
 	 * Returns our features.
@@ -31,17 +78,20 @@ class Features {
 	 */
 	public function getFeatures( $flushCache = false ) {
 		$features = aioseo()->core->networkCache->get( 'license_features' );
-		if ( null === $features || $flushCache ) {
+
+		if ( empty( $features ) || $flushCache ) {
 			$response = aioseo()->helpers->wpRemoteGet( $this->getFeaturesUrl() );
 			if ( 200 === wp_remote_retrieve_response_code( $response ) ) {
 				$features = json_decode( wp_remote_retrieve_body( $response ), true );
 			}
 
-			if ( ! $features || ! empty( $features->error ) ) {
-				$features = $this->getDefaultFeatures();
+			if ( ! empty( $features ) ) {
+				aioseo()->core->networkCache->update( 'license_features', $features );
 			}
+		}
 
-			aioseo()->core->networkCache->update( 'license_features', $features );
+		if ( empty( $features ) ) {
+			$features = $this->getDefaultFeatures();
 		}
 
 		// Convert the features array to objects using JSON. This is essential because we have lots of features that rely on this to be an object, and changing it to an array would break them.

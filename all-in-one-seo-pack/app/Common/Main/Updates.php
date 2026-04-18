@@ -85,6 +85,9 @@ class Updates {
 			return;
 		}
 
+		// Flush the object cache on plugin update to clear any stale data from persistent cache backends (e.g. Redis, Memcached).
+		wp_cache_flush();
+
 		// The dynamic options have not yet fully loaded, so let's refresh here to force that to happen.
 		aioseo()->dynamicOptions->refresh();
 
@@ -283,6 +286,10 @@ class Updates {
 
 		if ( version_compare( $lastActiveVersion, '4.9.4', '<' ) ) {
 			$this->addSeoChecklistToDashboardWidgets();
+		}
+
+		if ( version_compare( $lastActiveVersion, '4.9.6', '<' ) ) {
+			$this->migrateSensitiveOptions();
 		}
 
 		do_action( 'aioseo_run_updates', $lastActiveVersion );
@@ -2154,5 +2161,111 @@ class Updates {
 
 		// Reset the cache for the installed tables.
 		aioseo()->core->cache->delete( 'db_schema' );
+	}
+
+	/**
+	 * Migrates sensitive values from Options/InternalOptions to the new SensitiveOptions storage.
+	 *
+	 * @since 4.9.5
+	 *
+	 * @return void
+	 */
+	private function migrateSensitiveOptions() {
+		// Migrate from InternalOptions.
+		$rawInternalOptions = json_decode( (string) get_option( 'aioseo_options_internal', '' ), true );
+		if ( ! is_array( $rawInternalOptions ) ) {
+			$rawInternalOptions = [];
+		}
+
+		$internalMappings = [
+			'connectLicenseKey'          => [ 'internal', 'connectLicenseKey' ],
+			'aiAccessToken'              => [ 'internal', 'ai', 'accessToken' ],
+			'semrushAccessToken'         => [ 'integrations', 'semrush', 'accessToken' ],
+			'semrushRefreshToken'        => [ 'integrations', 'semrush', 'refreshToken' ],
+			'searchStatisticsTrustToken' => [ 'internal', 'searchStatistics', 'trustToken' ],
+			'siteAnalysisConnectToken'   => [ 'internal', 'siteAnalysis', 'connectToken' ]
+		];
+
+		$internalOptionsChanged = false;
+		foreach ( $internalMappings as $newKey => $path ) {
+			$value = aioseo()->helpers->getNestedValue( $rawInternalOptions, $path );
+			if ( ! empty( $value ) && is_string( $value ) ) {
+				aioseo()->sensitiveOptions->set( $newKey, $value );
+
+				// Remove the old value from the internal options.
+				$this->unsetNestedValue( $rawInternalOptions, $path );
+				$internalOptionsChanged = true;
+			}
+		}
+
+		// Migrate search statistics profile key and token from the profile array.
+		$profile = aioseo()->helpers->getNestedValue( $rawInternalOptions, [ 'internal', 'searchStatistics', 'profile' ] );
+		if ( is_array( $profile ) ) {
+			if ( ! empty( $profile['key'] ) && is_string( $profile['key'] ) ) {
+				aioseo()->sensitiveOptions->set( 'searchStatisticsProfileKey', $profile['key'] );
+				unset( $rawInternalOptions['internal']['searchStatistics']['profile']['key'] );
+				$internalOptionsChanged = true;
+			}
+			if ( ! empty( $profile['token'] ) && is_string( $profile['token'] ) ) {
+				aioseo()->sensitiveOptions->set( 'searchStatisticsProfileToken', $profile['token'] );
+				unset( $rawInternalOptions['internal']['searchStatistics']['profile']['token'] );
+				$internalOptionsChanged = true;
+			}
+		}
+
+		if ( $internalOptionsChanged ) {
+			update_option( 'aioseo_options_internal', wp_json_encode( $rawInternalOptions ), false );
+		}
+
+		// Migrate Lite connect key/token.
+		if ( ! aioseo()->pro ) {
+			$rawLiteInternalOptions = json_decode( (string) get_option( 'aioseo_options_internal_lite', '' ), true );
+			if ( is_array( $rawLiteInternalOptions ) ) {
+				$liteOptionsChanged = false;
+
+				$connectKey = aioseo()->helpers->getNestedValue( $rawLiteInternalOptions, [ 'internal', 'connect', 'key' ] );
+				if ( ! empty( $connectKey ) && is_string( $connectKey ) ) {
+					aioseo()->sensitiveOptions->set( 'connectKey', $connectKey );
+					unset( $rawLiteInternalOptions['internal']['connect']['key'] );
+					$liteOptionsChanged = true;
+				}
+
+				$connectToken = aioseo()->helpers->getNestedValue( $rawLiteInternalOptions, [ 'internal', 'connect', 'token' ] );
+				if ( ! empty( $connectToken ) && is_string( $connectToken ) ) {
+					aioseo()->sensitiveOptions->set( 'connectToken', $connectToken );
+					unset( $rawLiteInternalOptions['internal']['connect']['token'] );
+					$liteOptionsChanged = true;
+				}
+
+				if ( $liteOptionsChanged ) {
+					update_option( 'aioseo_options_internal_lite', wp_json_encode( $rawLiteInternalOptions ), false );
+				}
+			}
+		}
+
+		// Force save the sensitive options.
+		aioseo()->sensitiveOptions->save( true );
+	}
+
+	/**
+	 * Unsets a nested value in an array by path.
+	 *
+	 * @since 4.9.6
+	 *
+	 * @param  array $array The array to modify (passed by reference).
+	 * @param  array $path  The path to the value.
+	 * @return void
+	 */
+	private function unsetNestedValue( &$array, $path ) {
+		$lastKey = array_pop( $path );
+		$current = &$array;
+		foreach ( $path as $key ) {
+			if ( ! isset( $current[ $key ] ) || ! is_array( $current[ $key ] ) ) {
+				return;
+			}
+			$current = &$current[ $key ];
+		}
+
+		unset( $current[ $lastKey ] );
 	}
 }

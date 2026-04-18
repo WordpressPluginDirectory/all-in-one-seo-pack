@@ -6,6 +6,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+use AIOSEO\Plugin\Common\Models\SeoAnalyzerResult;
+
 class SeoChecklist {
 	protected $checks = [];
 
@@ -542,9 +544,7 @@ class SeoChecklist {
 	 * @return bool True if audit has been run.
 	 */
 	protected function checkRunHomepageAudit() {
-		$seoAnalysis = aioseo()->internalOptions->internal->siteAnalysis->score;
-
-		return ! empty( $seoAnalysis );
+		return ! empty( SeoAnalyzerResult::getResults() );
 	}
 
 	/**

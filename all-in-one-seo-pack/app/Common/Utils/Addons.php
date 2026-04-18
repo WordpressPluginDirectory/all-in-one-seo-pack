@@ -33,6 +33,15 @@ class Addons {
 	protected $addonsUrl = 'https://licensing-cdn.aioseo.com/keys/lite/all-in-one-seo-pack-pro.json';
 
 	/**
+	 * The Action Scheduler action name for refreshing the addons cache.
+	 *
+	 * @since 4.9.5.2
+	 *
+	 * @var string
+	 */
+	protected $actionName = 'aioseo_addons_refresh';
+
+	/**
 	 * The main Image SEO addon class.
 	 *
 	 * @since 4.4.2
@@ -105,6 +114,44 @@ class Addons {
 	private $eeat = null;
 
 	/**
+	 * Class constructor.
+	 *
+	 * @since 4.9.5.2
+	 */
+	public function __construct() {
+		add_action( 'admin_init', [ $this, 'scheduleRefresh' ] );
+		add_action( $this->actionName, [ $this, 'refresh' ] );
+	}
+
+	/**
+	 * Schedules the daily recurring addons cache refresh.
+	 * Hooked into `admin_init` action hook.
+	 *
+	 * @since 4.9.5.2
+	 *
+	 * @return void
+	 */
+	public function scheduleRefresh() {
+		if ( aioseo()->actionScheduler->isScheduled( $this->actionName ) ) {
+			return;
+		}
+
+		aioseo()->actionScheduler->scheduleRecurrent( $this->actionName, 0, DAY_IN_SECONDS );
+	}
+
+	/**
+	 * Refreshes the addons cache.
+	 * Hooked into `aioseo_addons_refresh` action hook.
+	 *
+	 * @since 4.9.5.2
+	 *
+	 * @return void
+	 */
+	public function refresh() {
+		$this->getAddons( true );
+	}
+
+	/**
 	 * Returns our addons.
 	 *
 	 * @since 4.0.0
@@ -115,20 +162,15 @@ class Addons {
 	public function getAddons( $flushCache = false ) {
 		require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
-		$addons        = aioseo()->core->cache->get( 'addons' );
-		$defaultAddons = $this->getDefaultAddons();
-		if ( null === $addons || $flushCache ) {
-			$lockKey = 'addons_fetch_lock';
-			if ( ! $flushCache && null !== aioseo()->core->cache->get( $lockKey ) ) {
-				$addons = aioseo()->core->cache->get( 'addons' );
-			}
+		$addons = aioseo()->core->networkCache->get( 'addons' );
 
-			if ( null === $addons || $flushCache ) {
-				aioseo()->core->cache->update( $lockKey, true, MINUTE_IN_SECONDS );
-				$addons = $this->fetchAddonsFromRemote( $defaultAddons );
-				aioseo()->core->cache->update( 'addons', $addons );
-				aioseo()->core->cache->delete( $lockKey );
-			}
+		if ( empty( $addons ) || $flushCache ) {
+			$addons = $this->fetchAddonsFromRemote();
+			aioseo()->core->networkCache->update( 'addons', $addons );
+		}
+
+		if ( empty( $addons ) ) {
+			$addons = $this->getDefaultAddons();
 		}
 
 		// Convert the addons array to objects using JSON. This is essential because we have lots of addons that rely on this to be an object, and changing it to an array would break them.
@@ -169,10 +211,9 @@ class Addons {
 	 *
 	 * @since 4.9.4.2
 	 *
-	 * @param  array $defaultAddons Fallback when the request fails or returns non-200.
 	 * @return array Addons array (decoded from JSON or default).
 	 */
-	protected function fetchAddonsFromRemote( $defaultAddons ) {
+	protected function fetchAddonsFromRemote() {
 		$response = aioseo()->helpers->wpRemoteGet( $this->getAddonsUrl() );
 		if ( 200 === wp_remote_retrieve_response_code( $response ) ) {
 			$addons = json_decode( wp_remote_retrieve_body( $response ), true );
@@ -181,7 +222,7 @@ class Addons {
 			}
 		}
 
-		return $defaultAddons;
+		return $this->getDefaultAddons();
 	}
 
 	/**

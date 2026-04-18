@@ -732,12 +732,14 @@ class Post extends Model {
 			return json_decode( wp_json_encode( $defaults ) );
 		}
 
+		$defaults = json_decode( wp_json_encode( $defaults ) );
+
 		if ( empty( $keyphrases->focus ) ) {
-			$keyphrases->focus = $defaults['focus'];
+			$keyphrases->focus = $defaults->focus;
 		}
 
 		if ( empty( $keyphrases->additional ) ) {
-			$keyphrases->additional = $defaults['additional'];
+			$keyphrases->additional = $defaults->additional;
 		}
 
 		return $keyphrases;
@@ -928,6 +930,7 @@ class Post extends Model {
 		$defaults = [
 			'faqs'         => [],
 			'keyPoints'    => [],
+			'schemas'      => [],
 			'titles'       => [],
 			'descriptions' => [],
 			'socialPosts'  => [

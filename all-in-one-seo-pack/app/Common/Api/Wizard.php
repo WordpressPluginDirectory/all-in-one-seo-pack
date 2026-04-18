@@ -313,7 +313,7 @@ class Wizard {
 		// Save the smart recommendations section.
 		if ( 'smartRecommendations' === $section && ! empty( $wizard['smartRecommendations'] ) ) {
 			$smartRecommendations = $wizard['smartRecommendations'];
-			if ( ! empty( $smartRecommendations['accountInfo'] ) && ! aioseo()->internalOptions->internal->siteAnalysis->connectToken ) {
+			if ( ! empty( $smartRecommendations['accountInfo'] ) && ! aioseo()->sensitiveOptions->hasValue( 'siteAnalysisConnectToken' ) ) {
 				$url      = defined( 'AIOSEO_CONNECT_DIRECT_URL' ) ? AIOSEO_CONNECT_DIRECT_URL : 'https://aioseo.com/wp-json/aioseo-lite-connect/v1/connect/';
 				$response = wp_remote_post( $url, [
 					'timeout'    => 10,
@@ -329,7 +329,7 @@ class Wizard {
 
 				$token = json_decode( wp_remote_retrieve_body( $response ) );
 				if ( ! empty( $token->token ) ) {
-					aioseo()->internalOptions->internal->siteAnalysis->connectToken = $token->token;
+					aioseo()->sensitiveOptions->set( 'siteAnalysisConnectToken', $token->token );
 				}
 			}
 		}

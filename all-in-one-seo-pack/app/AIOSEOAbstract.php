@@ -47,6 +47,24 @@ abstract class AIOSEOAbstract {
 	public $internalOptions = null;
 
 	/**
+	 * SensitiveOptions class instance.
+	 *
+	 * @since 4.9.6
+	 *
+	 * @var \AIOSEO\Plugin\Lite\Options\SensitiveOptions|\AIOSEO\Plugin\Pro\Options\SensitiveOptions
+	 */
+	public $sensitiveOptions = null;
+
+	/**
+	 * NetworkSensitiveOptions class instance.
+	 *
+	 * @since 4.9.6
+	 *
+	 * @var null|\AIOSEO\Plugin\Pro\Options\NetworkSensitiveOptions
+	 */
+	public $networkSensitiveOptions = null;
+
+	/**
 	 * PreUpdates class instance.
 	 *
 	 * @since 4.2.7

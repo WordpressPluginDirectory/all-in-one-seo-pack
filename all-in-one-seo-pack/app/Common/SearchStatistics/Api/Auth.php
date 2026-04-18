@@ -70,7 +70,7 @@ class Auth {
 	 * @return string The profile key.
 	 */
 	public function getKey() {
-		return ! empty( $this->profile['key'] ) ? $this->profile['key'] : '';
+		return aioseo()->sensitiveOptions->get( 'searchStatisticsProfileKey' );
 	}
 
 	/**
@@ -81,7 +81,7 @@ class Auth {
 	 * @return string The profile token.
 	 */
 	public function getToken() {
-		return ! empty( $this->profile['token'] ) ? $this->profile['token'] : '';
+		return aioseo()->sensitiveOptions->get( 'searchStatisticsProfileToken' );
 	}
 
 	/**
@@ -106,6 +106,14 @@ class Auth {
 		$this->profile = $data;
 
 		aioseo()->internalOptions->internal->searchStatistics->profile = $this->profile;
+
+		// Save sensitive data separately.
+		if ( ! empty( $data['key'] ) ) {
+			aioseo()->sensitiveOptions->set( 'searchStatisticsProfileKey', $data['key'] );
+		}
+		if ( ! empty( $data['token'] ) ) {
+			aioseo()->sensitiveOptions->set( 'searchStatisticsProfileToken', $data['token'] );
+		}
 	}
 
 	/**
@@ -117,6 +125,10 @@ class Auth {
 	 */
 	public function deleteProfile() {
 		$this->setProfile( [] );
+
+		// Clear sensitive data.
+		aioseo()->sensitiveOptions->delete( 'searchStatisticsProfileKey' );
+		aioseo()->sensitiveOptions->delete( 'searchStatisticsProfileToken' );
 	}
 
 	/**
@@ -127,7 +139,7 @@ class Auth {
 	 * @return bool Whether we are connected or not.
 	 */
 	public function isConnected() {
-		return ! empty( $this->profile['key'] );
+		return aioseo()->sensitiveOptions->hasValue( 'searchStatisticsProfileKey' );
 	}
 
 	/**
@@ -138,16 +150,22 @@ class Auth {
 	 * @return bool Whether the data is valid or not.
 	 */
 	public function verify( $credentials = [] ) {
-		$creds = ! empty( $credentials ) ? $credentials : aioseo()->internalOptions->internal->searchStatistics->profile;
+		if ( ! empty( $credentials ) ) {
+			$key   = $credentials['key'];
+			$token = $credentials['token'];
+		} else {
+			$key   = aioseo()->sensitiveOptions->get( 'searchStatisticsProfileKey' );
+			$token = aioseo()->sensitiveOptions->get( 'searchStatisticsProfileToken' );
+		}
 
-		if ( empty( $creds['key'] ) ) {
+		if ( empty( $key ) ) {
 			return new \WP_Error( 'validation-error', 'Authentication key is missing.' );
 		}
 
 		$request = new Request( "auth/verify/{$this->type}/", [
 			'tt'      => aioseo()->searchStatistics->api->trustToken->get(),
-			'key'     => $creds['key'],
-			'token'   => $creds['token'],
+			'key'     => $key,
+			'token'   => $token,
 			'testurl' => 'https://' . aioseo()->searchStatistics->api->getApiUrl() . '/v1/test/',
 		] );
 		$response = $request->request();
@@ -169,15 +187,16 @@ class Auth {
 			return false;
 		}
 
-		$creds = aioseo()->searchStatistics->api->auth->getProfile( true );
-		if ( empty( $creds['key'] ) ) {
+		$key   = aioseo()->sensitiveOptions->get( 'searchStatisticsProfileKey' );
+		$token = aioseo()->sensitiveOptions->get( 'searchStatisticsProfileToken' );
+		if ( empty( $key ) ) {
 			return false;
 		}
 
 		( new Request( "auth/delete/{$this->type}/", [
 			'tt'      => aioseo()->searchStatistics->api->trustToken->get(),
-			'key'     => $creds['key'],
-			'token'   => $creds['token'],
+			'key'     => $key,
+			'token'   => $token,
 			'testurl' => 'https://' . aioseo()->searchStatistics->api->getApiUrl() . '/v1/test/',
 		] ) )->request();
 

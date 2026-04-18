@@ -573,7 +573,10 @@ class Options {
 
 		$hasInitialized = true;
 
-		$this->defaults['searchAppearance']['global']['schema']['organizationLogo']['default'] = aioseo()->helpers->getSiteLogoUrl() ? aioseo()->helpers->getSiteLogoUrl() : '';
+		$siteLogoUrl = aioseo()->helpers->getSiteLogoUrl();
+
+		$this->defaults['searchAppearance']['global']['schema']['organizationLogo']['default'] = $siteLogoUrl ? $siteLogoUrl : '';
+		$this->defaults['searchAppearance']['global']['schema']['personLogo']['default']       = $siteLogoUrl ? $siteLogoUrl : '';
 
 		$this->defaults['advanced']['emailSummary']['recipients']['default'] = [
 			[

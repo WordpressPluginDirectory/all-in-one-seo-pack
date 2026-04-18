@@ -4,7 +4,7 @@ Tags: SEO, Google Search Console, XML Sitemap, meta description, schema
 Tested up to: 6.9
 Requires at least: 5.7
 Requires PHP: 7.2
-Stable tag: 4.9.5.1
+Stable tag: 4.9.6.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -231,6 +231,30 @@ AIOSEO&reg; is a registered trademark of Semper Plugins LLC. When writing about 
 
 == Changelog ==
 
+**New in Version 4.9.6.2**
+
+* Updated: Removed deprecated internal option references that could cause error on WooCommerce checkouts for some users.
+* Fixed: Possible fatal error when activating license via AIOSEO_LICENSE_KEY constant.
+
+**New in Version 4.9.6.1**
+
+* Fixed: Possible fatal error during WooCommerce checkout due to an internal option structure.
+
+**New in Version 4.9.6**
+
+* New: AI Schema Generator to allow users to generate structured data markup using AI with smart analysis and custom prompts.
+* New: Bulk action features to generate meta titles, descriptions, and image alt text for multiple posts and media items at once using AI.
+* New: Added Comment field to redirects for documenting redirect purposes and context.
+* Updated: Compatibility with WordPress 7.0.
+* Updated: Added Divi 5 Visual Builder support.
+* Updated: Add lazy-loading to metabox menu tabs for faster initial render and load times.
+* Updated: Replaced third-party libraries with lightweight alternatives for faster load times.
+* Updated: Hardened sensitive data so it can never be exposed on the frontend.
+
+**New in Version 4.9.5.2**
+
+* Fixed: License status could occasionally display outdated information.
+
 **New in Version 4.9.5.1**
 
 * Fixed: Improved title output buffering compatibility with themes that don't declare title-tag support.
@@ -344,31 +368,6 @@ AIOSEO&reg; is a registered trademark of Semper Plugins LLC. When writing about 
 * Fixed: Rare PHP error when action scheduler arguments are not a JSON object.
 * Fixed: DB lock issue when checking table schema in MariaDB.
 
-**New in Version 4.8.9**
-
-* Updated: Improved user permission checks to display Site Audit action buttons.
-* Updated: Added filter to disable AI Image Generator buttons in the block editor.
-* Fixed: Conflict with Avada theme where post content was disappearing in backend editor.
-* Fixed: Elementor Side Cart automatically opening even when the cart is empty on single product pages.
-* Fixed: Category title missing from meta descriptions on new sites.
-* Fixed: Redundant schema queries when database schema cache fails to update.
-* Fixed: JS error when accessing string offsets in SEO revisions data processing.
-* Fixed: Keyword Rank Tracker button broke in the Post editor if the Spectra or Starter Templates plugin was activated.
-* Fixed: Homepage meta description character counter breaks when the site is set as an Organization.
-* Fixed: New feature popups rendering outside the viewport on smaller screens.
-
-**New in Version 4.8.8**
-
-* New: AI Assistant Block - Generate any type of content right inside the post editor: blog articles, summaries, comparison tables, and more. Whatever you need, the AI Assistant block makes it happen.
-* New: AI Image Generator - Instantly create eye-catching visuals for your posts and use them anywhere—from featured images to inline content. You can even edit existing images to give them a unique twist.
-* New: LLMs.txt Improvements – The new llms-full.txt file makes it easy for AI engines to index your site without overloading your server. We’ve also added post-to-Markdown conversion and new settings to control exactly what content gets included.
-* Updated: All existing AI Content features have been made compatible with all our supported page builders. You can now auto-generate SEO titles, meta descriptions, FAQs, keypoints and social posts directly inside Elementor, Divi, SeedProd, Avada, WPBakery, SiteOrigin and Thrive Architect!
-* Updated: The llms.txt file is now generated as a static file, removing the need for rewrite rules (e.g. on WP Engine).
-* Updated: Moved llms.txt under Sitemaps menu.
-* Fixed: Site Audit sometimes not showing results when all content types are included.
-* Fixed: PHP error when Site Audit cannot scan post due to uninstantiated social class.
-* Fixed: PHP error when dashboard widget failed to fetch RSS news feed.
-
 **See our [changelog on aioseo.com](https://aioseo.com/changelog/?utm_source=wprepo&utm_medium=link&utm_campaign=aioseo) for previous releases.**
 
 == Frequently Asked Questions ==
@@ -450,6 +449,6 @@ Additionally, AIOSEO can also provide you with data on the most frequently used 
 
 == Upgrade Notice ==
 
-= 4.9.5.1 =
+= 4.9.6.2 =
 
 This update adds major improvements and bug fixes.
