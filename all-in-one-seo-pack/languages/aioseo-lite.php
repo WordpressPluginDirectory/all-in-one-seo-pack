@@ -45,11 +45,11 @@ $generated_i18n_strings = [
 	// Translators: 1 - The number of H1 tags found.
 	__( '%1$d H1 tags were found.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:155
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:161
 	// Translators: 1 - The amount of the images without alt attributes.
 	_n( '%1$d image has no alt text.', '%1$d images have no alt text.', 0, 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:184
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:190
 	// Translators: 1 - The amount of the internal links.
 	_n( '%1$d internal link was found, which is too few.', '%1$d internal links were found, which is too few.', 0, 'all-in-one-seo-pack' ),
 
@@ -65,11 +65,11 @@ $generated_i18n_strings = [
 	// Translators: 1 - Expand to the number of text sections not separated by subheadings, 2 - expands to the recommended number of words following a subheading.
 	_n( '%1$d section of your text is longer than %2$d words and is not separated by any subheadings. Add subheadings to improve readability.', '%1$d sections of your text are longer than %2$d words and are not separated by any subheadings. Add subheadings to improve readability.', 0, 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:119
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:125
 	// Translators: 1 - The amount of the subheadings.
 	_n( '%1$d subheading was found on the page, but it does not include the focus keyword.', '%1$d subheadings were found on the page, but none of them include the focus keyword.', 0, 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:133
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:139
 	// Translators: 1 - The amount of the subheadings.
 	_n( '%1$d subheading was found on the page.', '%1$d subheadings were found on the page.', 0, 'all-in-one-seo-pack' ),
 
@@ -3713,6 +3713,9 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/standalone/post-settings/views/partials/ai-content/utils.js:16
 	__( 'Generate Content', 'all-in-one-seo-pack' ),
 
+	// Reference: /src/vue/standalone/blocks/ai-assistant/components/PromptTemplateSelector.jsx:6
+	__( 'Generate FAQ', 'all-in-one-seo-pack' ),
+
 	// Reference: /src/vue/standalone/post-settings/views/partials/ai-content/utils.js:95
 	__( 'Generate FAQs', 'all-in-one-seo-pack' ),
 
@@ -3722,6 +3725,9 @@ $generated_i18n_strings = [
 
 	// Reference: /src/vue/standalone/post-settings/views/partials/ai-content/utils.js:94
 	__( 'Generate helpful FAQs based on your content to enhance user engagement and boost SEO.', 'all-in-one-seo-pack' ),
+
+	// Reference: /src/vue/standalone/blocks/ai-assistant/components/PromptTemplateSelector.jsx:7
+	__( 'Generate How-To', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/standalone/post-settings/views/partials/ai-content/utils.js:58
 	__( 'Generate Image', 'all-in-one-seo-pack' ),
@@ -4447,15 +4453,15 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/pages/ai-bulk-generate/views/Main.vue:169
 	__( 'Image Title', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:149
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:166
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:170
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:155
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:172
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:176
 	__( 'Images are important for SEO and improve user experience & engagement. Images should be optimized (relevant filename, alt text, small file size) so they can also rank separately in image search results.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:169
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:175
 	__( 'Images have alt text.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:152
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:158
 	__( 'Images have no alt text.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/classes/SiteAnalysis.js:362
@@ -4805,9 +4811,9 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/pages/link-assistant/views/partials/overview/LinkRatio.vue:52
 	__( 'Internal Links', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:178
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:192
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:196
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:184
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:198
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:202
 	__( 'Internal links are links that point to other pages on your site. They help search engines understand the structure of your site, discover new pages and improve your site\'s authority. We recommend adding at least 1 internal link per 500 words of content.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/plugins/constants.js:1288
@@ -5194,6 +5200,9 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/pages/link-assistant/router/paths.js:31
 	__( 'Links Report', 'all-in-one-seo-pack' ),
 
+	// Reference: /src/vue/standalone/blocks/table-of-contents/vue/Sidebar.jsx:75
+	__( 'List All Headings', 'all-in-one-seo-pack' ),
+
 	// Reference: /src/vue/pages/search-appearance/views/partials/lite/CustomFields.vue:26
 	__( 'List of custom field names to include as post content for tags and the SEO Page Analysis. Add one per line.', 'all-in-one-seo-pack' ),
 
@@ -5572,7 +5581,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/pages/settings/views/SeoChecklist.vue:130
 	__( 'More than halfway there!', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:96
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:102
 	__( 'More than one H1 tag found.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/link-assistant/views/partials/overview/MostLinkedDomains.vue:31
@@ -5784,7 +5793,7 @@ $generated_i18n_strings = [
 	// Reference: /src/app/tru-seo/analyzer/analysis/keyphraseInIntroduction.js:25
 	__( 'No content added yet.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:218
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:224
 	__( 'No content found.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/app/tru-seo/analyzer/analysis/contentHasAssets.js:31
@@ -5797,7 +5806,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/standalone/seo-preview/views/SeoInspector.vue:46
 	__( 'No data yet', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:203
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:209
 	__( 'No featured image found.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/classes/SeoAnalysis/AdvancedIssues.js:92
@@ -5813,7 +5822,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/components/common/core/RobotsMeta.vue:33
 	__( 'No Follow Paginated', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:92
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:98
 	__( 'No H1 tag found.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/classes/SiteAnalysis.js:119
@@ -5829,7 +5838,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/components/common/core/SingleRobotsMeta.vue:35
 	__( 'No Image Index', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:148
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:154
 	__( 'No images found.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/ai-bulk-generate/views/Main.vue:159
@@ -5845,7 +5854,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/components/common/core/RobotsMeta.vue:34
 	__( 'No Index RSS Feeds', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:177
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:183
 	__( 'No internal links found.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/classes/SiteAnalysis.js:176
@@ -5866,13 +5875,13 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/standalone/seo-preview/views/SeoInspector.vue:45
 	__( 'No keyword found', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:53
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:56
 	__( 'No meta description found.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/app/tru-seo/analyzer/analysis/metadescriptionLength.js:20
 	__( 'No meta description has been specified. Search engines will display copy from the page instead. Make sure to write one!', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:54
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:57
 	// Reference: /src/vue/classes/SiteAnalysis.js:72
 	__( 'No meta description was found for the page.', 'all-in-one-seo-pack' ),
 
@@ -5895,7 +5904,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/pages/ai-bulk-generate/views/Main.vue:159
 	__( 'No posts were selected for bulk generation.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:329
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:335
 	__( 'No product schema found.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/standalone/post-settings/views/partials/general/focus-keyphrase/SemrushKeywordsTable.vue:70
@@ -5924,7 +5933,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/classes/SiteAnalysis.js:290
 	__( 'No Schema.org data was found on your page.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:27
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:28
 	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:8
 	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:9
 	__( 'No SEO title found.', 'all-in-one-seo-pack' ),
@@ -5933,7 +5942,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/components/common/core/SingleRobotsMeta.vue:36
 	__( 'No Snippet', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:112
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:118
 	__( 'No subheadings found.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/components/common/core/PostTypeOptions.vue:58
@@ -5996,7 +6005,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/components/common/notifications/Review2.vue:35
 	__( 'Nope, maybe later', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/standalone/blocks/ai-assistant/main.jsx:38
+	// Reference: /src/vue/standalone/blocks/ai-assistant/main.jsx:39
 	__( 'Not a fan of these options? You can set your own tone/audience directly in your prompt.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/about/views/lite/LiteVsPro.vue:139
@@ -6819,8 +6828,8 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/standalone/post-settings/composables/schema.js:79
 	__( 'Product Review', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:330
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:335
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:336
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:341
 	__( 'Product schema is a type of structured data that helps search engines understand your product. Google and other search engines use product schema for rich snippets (e.g. price and star rating) and other features.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/utils/tags.js:54
@@ -6847,6 +6856,9 @@ $generated_i18n_strings = [
 
 	// Reference: /src/vue/standalone/ai-image-generator/views/partials/Form.vue:47
 	__( 'Prompt', 'all-in-one-seo-pack' ),
+
+	// Reference: /src/vue/standalone/blocks/ai-assistant/components/PromptTemplateSelector.jsx:4
+	__( 'Prompt Templates', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/components/common/core/GoogleSearchPreview.vue:55
 	__( 'Pros and cons include', 'all-in-one-seo-pack' ),
@@ -7507,6 +7519,9 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/pages/tools/views/partials/ImportOthers.vue:46
 	__( 'Select a plugin...', 'all-in-one-seo-pack' ),
 
+	// Reference: /src/vue/standalone/blocks/ai-assistant/components/PromptTemplateSelector.jsx:5
+	__( 'Select a template', 'all-in-one-seo-pack' ),
+
 	// Reference: /src/vue/components/common/core/add-redirection/CustomRules.vue:56
 	// Reference: /src/vue/pages/search-appearance/views/partials/query-arg-monitor/BlockArg.vue:24
 	__( 'Select a Value or Add a New One', 'all-in-one-seo-pack' ),
@@ -8136,15 +8151,15 @@ $generated_i18n_strings = [
 	// Reference: /src/app/tru-seo/analyzer/analysis/subheadingsDistribution.js:83
 	__( 'Subheading distribution', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:113
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:127
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:141
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:119
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:133
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:147
 	__( 'Subheadings (H2, H3, H4, H5, H6, etc.) are important for SEO and user experience. They help break up the content and make it more readable. At least one subheading should have the focus keyword.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:116
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:122
 	__( 'Subheadings do not include your focus keyword.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:130
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:136
 	__( 'Subheadings include your focus keyword.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/standalone/post-settings/views/partials/ai-content/social-posts/Email.vue:10
@@ -8236,10 +8251,10 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/standalone/blocks/table-of-contents/vue/SelectMode.vue:53
 	__( 'Synced', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/standalone/blocks/table-of-contents/vue/Sidebar.jsx:75
+	// Reference: /src/vue/standalone/blocks/table-of-contents/vue/Sidebar.jsx:87
 	__( 'Synced Table of Contents', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/standalone/blocks/table-of-contents/vue/Sidebar.jsx:76
+	// Reference: /src/vue/standalone/blocks/table-of-contents/vue/Sidebar.jsx:88
 	__( 'Syncing table of contents enables you to build one unified table of contents for documents with multiple sections, even using separate ToC blocks.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/tools/router/paths.js:53
@@ -8248,7 +8263,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/pages/tools/views/SystemStatus.vue:40
 	__( 'System Status Info', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/standalone/blocks/table-of-contents/edit.jsx:310
+	// Reference: /src/vue/standalone/blocks/table-of-contents/edit.jsx:330
 	__( 'Table of Contents Settings', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/components/common/core/add-redirection/Index.vue:112
@@ -8435,7 +8450,7 @@ $generated_i18n_strings = [
 	// Translators: 1 - "<head></head>".
 	__( 'The code above will be added between the %1$s tags on every page on your website.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:222
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:228
 	// Translators: 1 - The length of the content.
 	__( 'The content is %1$d words long, which is too short. We recommend adding at least 300 words of content.', 'all-in-one-seo-pack' ),
 
@@ -8443,17 +8458,17 @@ $generated_i18n_strings = [
 	// Reference: /src/app/tru-seo/analyzer/analysis/lengthContent.js:62
 	__( 'The content is below the minimum of words. Add more content.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:229
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:235
 	__( 'The content is long enough.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/classes/SeoAnalysis/AdvancedIssues.js:106
 	__( 'The content is more than 2 years old and may be outdated. Stale content can hurt rankings if it is outdated or irrelevant. Search engines favor fresh, updated content—especially for topics that change over time. If your content stays accurate and useful, freshness matters less.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:226
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:230
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:232
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:236
 	__( 'The content is the main body of text on your page that provides information to your visitors. It should be at least 300 words long. Articles that are too short lack depth and are less likely to rank well because search engines prefer longer, more informative content.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:215
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:221
 	__( 'The content is too short.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/classes/SeoAnalysis/AdvancedIssues.js:110
@@ -8509,11 +8524,11 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/pages/about/views/AboutUs.vue:196
 	__( 'The fastest drag & drop landing page builder for WordPress. Create custom landing pages without writing code, connect them with your CRM, collect subscribers, and grow your audience. Trusted by 1 million sites.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:204
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:208
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:210
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:214
 	__( 'The featured image is the main image that represents your page. They grab attention, improve click-through rates on social and search results, and provide context to both users and search engines.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:207
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:213
 	__( 'The featured image was found.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/standalone/user-profile-tab/partials/EeatBlur.vue:16
@@ -8522,27 +8537,27 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/pages/sitemaps/views/partials/AddAdditionalPage.vue:121
 	__( 'The file that you\'ve currently selected is not a CSV file.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:259
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:265
 	__( 'The first paragraph does not include the focus keyword.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:263
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:269
 	__( 'The first paragraph includes the focus keyword.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:260
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:264
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:266
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:270
 	__( 'The first paragraph on the page should include your focus keyword. This helps search engines quickly understand what the page is about and signals relevance.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/search-appearance/views/lite/image-seo/Blur.vue:103
 	__( 'The first word of each sentence starts with a capital.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:238
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:244
 	__( 'The focus keyword is targeted by multiple pages.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:251
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:257
 	__( 'The focus keyword is targeted only by this page.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:240
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:252
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:246
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:258
 	__( 'The focus keyword is the main keyword that the page is ranking for. It should be unique to the page. If multiple pages are targeting the same focus keyword, they will all compete for the same traffic and perform worse. This is known as keyword cannibalization.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/classes/SeoAnalysis/AdvancedIssues.js:93
@@ -8567,7 +8582,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/classes/SeoAnalysis/AdvancedIssues.js:23
 	__( 'The following Open Graph meta tags are missing:', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:239
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:245
 	__( 'The following pages on your site are competing for the same keyword:', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/standalone/setup-wizard/views/Features.vue:88
@@ -8610,18 +8625,18 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/pages/sitemaps/composables/NewsSitemap.js:10
 	__( 'The Google News Sitemap lets you control which content you submit to Google News and only contains articles that were published in the last 48 hours.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:100
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:106
 	__( 'The H1 tag does not include your focus keyword.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:104
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:110
 	__( 'The H1 tag includes your focus keyword.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:101
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:105
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:93
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:107
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:111
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:99
 	__( 'The H1 tag is the main heading on the page and signals the topic of your page to search engines. It should be clear and include your focus keyword.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:97
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:103
 	__( 'The H1 tag is the main heading on the page and signals the topic of your page to search engines. You should only have a single H1 tag on your page.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/settings/views/seo-checklist/info/RunHomepageAudit.vue:9
@@ -8679,17 +8694,17 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/composables/MediaUploader.js:149
 	__( 'The media uploader is not available. Please paste the image URL directly.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:286
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:292
 	__( 'The meta description does not include the focus keyword.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:291
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:297
 	__( 'The meta description includes the focus keyword.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:72
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:76
 	// Translators: 1 - The length of the meta description.
 	__( 'The meta description is %1$d characters long, which is higher than our recommended range of 120-160 characters.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:62
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:65
 	// Translators: 1 - The length of the meta description.
 	__( 'The meta description is %1$d characters long, which is lower than our recommended range of 120-160 characters.', 'all-in-one-seo-pack' ),
 
@@ -8697,21 +8712,21 @@ $generated_i18n_strings = [
 	// Translators: 1 - The length of the meta description as a number.
 	__( 'The meta description is %1$d characters long, which is too long.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:82
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:87
 	// Translators: 1 - The length of the meta description.
 	__( 'The meta description is %1$d characters long, which is within our recommended range of 120-160 characters.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:85
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:91
 	__( 'The meta description is a summary of your page that appears in search results.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:287
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:292
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:55
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:65
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:75
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:293
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:298
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:58
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:69
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:80
 	__( 'The meta description is a summary of your page that appears in search results. It should be 120 to 160 characters long, include your focus keyword and incentivize readers to click through to your page.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:79
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:84
 	__( 'The meta description is of good length.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/classes/SiteAnalysis.js:80
@@ -8725,11 +8740,11 @@ $generated_i18n_strings = [
 	// Translators: 1 - The length of the meta description as a number.
 	__( 'The meta description is set and is %1$d characters long.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:69
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:73
 	__( 'The meta description is too long.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/app/tru-seo/analyzer/analysis/metadescriptionLength.js:29
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:59
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:62
 	__( 'The meta description is too short.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/about/views/AboutUs.vue:316
@@ -8767,7 +8782,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/classes/SiteAnalysis.js:215
 	__( 'The page does not contain any noindex header or meta tag.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:195
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:201
 	// Reference: /src/vue/classes/SiteAnalysis.js:182
 	__( 'The page has a correct number of internal and external links.', 'all-in-one-seo-pack' ),
 
@@ -8790,7 +8805,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/pages/sitemaps/views/HtmlSitemap.vue:39
 	__( 'The post types (by slug, comma-separated) that are included in the sitemap.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:334
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:340
 	__( 'The product schema was found.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/settings/views/Breadcrumbs.vue:83
@@ -8851,17 +8866,17 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/composables/SeoSiteScore.js:90
 	__( 'The SEO analysis failed due to an unknown error. Please wait a moment and try again. If the issue continues to occur, then please contact our support team.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:272
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:278
 	__( 'The SEO title does not include the focus keyword.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:277
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:283
 	__( 'The SEO title includes the focus keyword.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:17
 	// Translators: 1 - The length of the SEO title.
 	__( 'The SEO title is %1$d characters long, which is higher than our recommended range of 40-60 characters.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:31
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:32
 	// Translators: 1 - The length of the SEO title.
 	__( 'The SEO title is %1$d characters long, which is lower than our recommended range of 40-60 characters.', 'all-in-one-seo-pack' ),
 
@@ -8869,11 +8884,11 @@ $generated_i18n_strings = [
 	// Translators: 1 - The length of the SEO title as a number.
 	__( 'The SEO title is %1$d characters long, which is too long.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:42
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:44
 	// Translators: 1 - The length of the SEO title.
 	__( 'The SEO title is %1$d characters long, which is within our recommended range of 40-60 characters.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:39
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:41
 	__( 'The SEO title is of good length.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/classes/SiteAnalysis.js:33
@@ -8885,17 +8900,17 @@ $generated_i18n_strings = [
 	__( 'The SEO title is set and is %1$d characters long.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:10
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:20
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:273
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:278
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:35
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:45
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:21
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:279
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:284
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:37
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:48
 	__( 'The SEO title is the title of your page that appears in search results. It should be 40 to 60 characters long, include your focus keyword and incentivize readers to click through to your page.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:14
 	__( 'The SEO title is too long.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:24
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:25
 	__( 'The SEO title is too short.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/classes/SiteAnalysis.js:309
@@ -8959,26 +8974,26 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/pages/social-networks/views/Facebook.vue:87
 	__( 'The Title of the Page or Site you are Sharing', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:299
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:305
 	__( 'The URL does not include the focus keyword.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:303
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:309
 	__( 'The URL includes the focus keyword.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:314
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:320
 	// Translators: 1 - The length of the URL.
 	__( 'The URL is %1$d characters long, it should be less than 50 characters.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:320
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:326
 	__( 'The URL is of good length.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:300
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:304
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:317
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:321
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:306
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:310
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:323
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:327
 	__( 'The URL is the address of your page that appears in search results. It should be 50 characters or less and include your focus keyword to help search engines understand the topic of your page.', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:311
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:317
 	__( 'The URL is too long.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/search-appearance/views/partials/eeat/EeatBlur.vue:72
@@ -9400,7 +9415,7 @@ $generated_i18n_strings = [
 	// Reference: /src/vue/standalone/blocks/ai-assistant/components/ToneSelector.jsx:5
 	__( 'Tone', 'all-in-one-seo-pack' ),
 
-	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:181
+	// Reference: /src/vue/classes/SeoAnalysis/BasicIssues.js:187
 	__( 'Too few internal links found.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/classes/SiteAnalysis.js:178
@@ -10355,6 +10370,9 @@ $generated_i18n_strings = [
 
 	// Reference: /src/vue/pages/settings/views/seo-checklist/info/EnableLlmsTxt.vue:14
 	__( 'When enabled, AIOSEO generates an llms.txt file at the root of your site. This file contains structured information about your site that AI models can read and use to better understand your content.', 'all-in-one-seo-pack' ),
+
+	// Reference: /src/vue/standalone/blocks/table-of-contents/vue/Sidebar.jsx:76
+	__( 'When enabled, this block will list all headings on the page, not just the ones after it.', 'all-in-one-seo-pack' ),
 
 	// Reference: /src/vue/pages/settings/views/seo-checklist/info/FillKnowledgeGraph.vue:13
 	__( 'When you fill out your organization or person details in AIOSEO, this information is automatically output as schema.org markup that Google and other search engines can read. This helps them populate your Knowledge Panel with accurate information.', 'all-in-one-seo-pack' ),

@@ -60,6 +60,7 @@ return array(
     'AIOSEO\\Plugin\\Common\\Breadcrumbs\\Tags' => $baseDir . '/app/Common/Breadcrumbs/Tags.php',
     'AIOSEO\\Plugin\\Common\\Breadcrumbs\\Widget' => $baseDir . '/app/Common/Breadcrumbs/Widget.php',
     'AIOSEO\\Plugin\\Common\\Core\\Core' => $baseDir . '/app/Common/Core/Core.php',
+    'AIOSEO\\Plugin\\Common\\Db\\Schema' => $baseDir . '/app/Common/Db/Schema.php',
     'AIOSEO\\Plugin\\Common\\EmailReports\\EmailReports' => $baseDir . '/app/Common/EmailReports/EmailReports.php',
     'AIOSEO\\Plugin\\Common\\EmailReports\\Mail' => $baseDir . '/app/Common/EmailReports/Mail.php',
     'AIOSEO\\Plugin\\Common\\EmailReports\\Summary\\Content' => $baseDir . '/app/Common/EmailReports/Summary/Content.php',
