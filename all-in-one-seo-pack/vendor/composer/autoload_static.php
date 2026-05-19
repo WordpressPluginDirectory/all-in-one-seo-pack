@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit46704913f9e5c40920c26e011b9458e3
+class ComposerStaticInit55aa19e8ad5823aa45d2cf34593a4737
 {
     public static $prefixLengthsPsr4 = array (
         'L' => 
@@ -138,6 +138,10 @@ class ComposerStaticInit46704913f9e5c40920c26e011b9458e3
         'AIOSEO\\Plugin\\Common\\Main\\Head' => __DIR__ . '/../..' . '/app/Common/Main/Head.php',
         'AIOSEO\\Plugin\\Common\\Main\\Main' => __DIR__ . '/../..' . '/app/Common/Main/Main.php',
         'AIOSEO\\Plugin\\Common\\Main\\Media' => __DIR__ . '/../..' . '/app/Common/Main/Media.php',
+        'AIOSEO\\Plugin\\Common\\Main\\Migrations\\Definitions\\DropLegacyCacheIndexes' => __DIR__ . '/../..' . '/app/Common/Main/Migrations/Definitions/DropLegacyCacheIndexes.php',
+        'AIOSEO\\Plugin\\Common\\Main\\Migrations\\Migration' => __DIR__ . '/../..' . '/app/Common/Main/Migrations/Migration.php',
+        'AIOSEO\\Plugin\\Common\\Main\\Migrations\\MigrationLog' => __DIR__ . '/../..' . '/app/Common/Main/Migrations/MigrationLog.php',
+        'AIOSEO\\Plugin\\Common\\Main\\Migrations\\MigrationRunner' => __DIR__ . '/../..' . '/app/Common/Main/Migrations/MigrationRunner.php',
         'AIOSEO\\Plugin\\Common\\Main\\PreUpdates' => __DIR__ . '/../..' . '/app/Common/Main/PreUpdates.php',
         'AIOSEO\\Plugin\\Common\\Main\\QueryArgs' => __DIR__ . '/../..' . '/app/Common/Main/QueryArgs.php',
         'AIOSEO\\Plugin\\Common\\Main\\Title' => __DIR__ . '/../..' . '/app/Common/Main/Title.php',
@@ -385,10 +389,10 @@ class ComposerStaticInit46704913f9e5c40920c26e011b9458e3
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit46704913f9e5c40920c26e011b9458e3::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit46704913f9e5c40920c26e011b9458e3::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit46704913f9e5c40920c26e011b9458e3::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit46704913f9e5c40920c26e011b9458e3::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit55aa19e8ad5823aa45d2cf34593a4737::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit55aa19e8ad5823aa45d2cf34593a4737::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit55aa19e8ad5823aa45d2cf34593a4737::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit55aa19e8ad5823aa45d2cf34593a4737::$classMap;
 
         }, null, ClassLoader::class);
     }
