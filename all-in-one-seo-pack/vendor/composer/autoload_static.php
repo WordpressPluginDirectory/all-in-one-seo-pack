@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit8a081da25031c092fc2baa55d98421f8
+class ComposerStaticInit610fddf6b0658f379e50deed3a514f6c
 {
     public static $prefixLengthsPsr4 = array (
         'L' => 
@@ -80,6 +80,7 @@ class ComposerStaticInit8a081da25031c092fc2baa55d98421f8
         'AIOSEO\\Plugin\\Common\\Api\\Plugins' => __DIR__ . '/../..' . '/app/Common/Api/Plugins.php',
         'AIOSEO\\Plugin\\Common\\Api\\PostsTerms' => __DIR__ . '/../..' . '/app/Common/Api/PostsTerms.php',
         'AIOSEO\\Plugin\\Common\\Api\\SearchStatistics' => __DIR__ . '/../..' . '/app/Common/Api/SearchStatistics.php',
+        'AIOSEO\\Plugin\\Common\\Api\\SeoAlerts' => __DIR__ . '/../..' . '/app/Common/Api/SeoAlerts.php',
         'AIOSEO\\Plugin\\Common\\Api\\SeoChecklist' => __DIR__ . '/../..' . '/app/Common/Api/SeoChecklist.php',
         'AIOSEO\\Plugin\\Common\\Api\\Settings' => __DIR__ . '/../..' . '/app/Common/Api/Settings.php',
         'AIOSEO\\Plugin\\Common\\Api\\Sitemaps' => __DIR__ . '/../..' . '/app/Common/Api/Sitemaps.php',
@@ -231,6 +232,9 @@ class ComposerStaticInit8a081da25031c092fc2baa55d98421f8
         'AIOSEO\\Plugin\\Common\\SearchStatistics\\SearchStatistics' => __DIR__ . '/../..' . '/app/Common/SearchStatistics/SearchStatistics.php',
         'AIOSEO\\Plugin\\Common\\SearchStatistics\\Site' => __DIR__ . '/../..' . '/app/Common/SearchStatistics/Site.php',
         'AIOSEO\\Plugin\\Common\\SearchStatistics\\Sitemap' => __DIR__ . '/../..' . '/app/Common/SearchStatistics/Sitemap.php',
+        'AIOSEO\\Plugin\\Common\\SeoAlerts\\Email' => __DIR__ . '/../..' . '/app/Common/SeoAlerts/Email.php',
+        'AIOSEO\\Plugin\\Common\\SeoAlerts\\SeoAlerts' => __DIR__ . '/../..' . '/app/Common/SeoAlerts/SeoAlerts.php',
+        'AIOSEO\\Plugin\\Common\\SeoAlerts\\Slack' => __DIR__ . '/../..' . '/app/Common/SeoAlerts/Slack.php',
         'AIOSEO\\Plugin\\Common\\SeoAnalysis\\SeoAnalysis' => __DIR__ . '/../..' . '/app/Common/SeoAnalysis/SeoAnalysis.php',
         'AIOSEO\\Plugin\\Common\\SeoChecklist\\SeoChecklist' => __DIR__ . '/../..' . '/app/Common/SeoChecklist/SeoChecklist.php',
         'AIOSEO\\Plugin\\Common\\SeoRevisions\\SeoRevisions' => __DIR__ . '/../..' . '/app/Common/SeoRevisions/SeoRevisions.php',
@@ -400,10 +404,10 @@ class ComposerStaticInit8a081da25031c092fc2baa55d98421f8
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit8a081da25031c092fc2baa55d98421f8::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit8a081da25031c092fc2baa55d98421f8::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit8a081da25031c092fc2baa55d98421f8::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit8a081da25031c092fc2baa55d98421f8::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit610fddf6b0658f379e50deed3a514f6c::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit610fddf6b0658f379e50deed3a514f6c::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit610fddf6b0658f379e50deed3a514f6c::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit610fddf6b0658f379e50deed3a514f6c::$classMap;
 
         }, null, ClassLoader::class);
     }
