@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInite090444550b72c5e13a019d7adec22cb
+class ComposerStaticInit1dc5609ceff85151a470c5b8ef014319
 {
     public static $prefixLengthsPsr4 = array (
         'L' => 
@@ -84,6 +84,7 @@ class ComposerStaticInite090444550b72c5e13a019d7adec22cb
         'AIOSEO\\Plugin\\Common\\Api\\SeoChecklist' => __DIR__ . '/../..' . '/app/Common/Api/SeoChecklist.php',
         'AIOSEO\\Plugin\\Common\\Api\\Settings' => __DIR__ . '/../..' . '/app/Common/Api/Settings.php',
         'AIOSEO\\Plugin\\Common\\Api\\Sitemaps' => __DIR__ . '/../..' . '/app/Common/Api/Sitemaps.php',
+        'AIOSEO\\Plugin\\Common\\Api\\SpellChecker' => __DIR__ . '/../..' . '/app/Common/Api/SpellChecker.php',
         'AIOSEO\\Plugin\\Common\\Api\\Tags' => __DIR__ . '/../..' . '/app/Common/Api/Tags.php',
         'AIOSEO\\Plugin\\Common\\Api\\Tools' => __DIR__ . '/../..' . '/app/Common/Api/Tools.php',
         'AIOSEO\\Plugin\\Common\\Api\\User' => __DIR__ . '/../..' . '/app/Common/Api/User.php',
@@ -136,6 +137,7 @@ class ComposerStaticInite090444550b72c5e13a019d7adec22cb
         'AIOSEO\\Plugin\\Common\\Integrations\\WpCode' => __DIR__ . '/../..' . '/app/Common/Integrations/WpCode.php',
         'AIOSEO\\Plugin\\Common\\Llms\\Llms' => __DIR__ . '/../..' . '/app/Common/Llms/Llms.php',
         'AIOSEO\\Plugin\\Common\\Main\\Activate' => __DIR__ . '/../..' . '/app/Common/Main/Activate.php',
+        'AIOSEO\\Plugin\\Common\\Main\\BulkActions' => __DIR__ . '/../..' . '/app/Common/Main/BulkActions.php',
         'AIOSEO\\Plugin\\Common\\Main\\CategoryBase' => __DIR__ . '/../..' . '/app/Common/Main/CategoryBase.php',
         'AIOSEO\\Plugin\\Common\\Main\\Filters' => __DIR__ . '/../..' . '/app/Common/Main/Filters.php',
         'AIOSEO\\Plugin\\Common\\Main\\Head' => __DIR__ . '/../..' . '/app/Common/Main/Head.php',
@@ -180,6 +182,9 @@ class ComposerStaticInite090444550b72c5e13a019d7adec22cb
         'AIOSEO\\Plugin\\Common\\Models\\SeoAnalyzerResult' => __DIR__ . '/../..' . '/app/Common/Models/SeoAnalyzerResult.php',
         'AIOSEO\\Plugin\\Common\\Models\\WritingAssistantKeyword' => __DIR__ . '/../..' . '/app/Common/Models/WritingAssistantKeyword.php',
         'AIOSEO\\Plugin\\Common\\Models\\WritingAssistantPost' => __DIR__ . '/../..' . '/app/Common/Models/WritingAssistantPost.php',
+        'AIOSEO\\Plugin\\Common\\Newsroom\\Newsroom' => __DIR__ . '/../..' . '/app/Common/Newsroom/Newsroom.php',
+        'AIOSEO\\Plugin\\Common\\Newsroom\\ScreenCallout' => __DIR__ . '/../..' . '/app/Common/Newsroom/ScreenCallout.php',
+        'AIOSEO\\Plugin\\Common\\Newsroom\\UpdateModal' => __DIR__ . '/../..' . '/app/Common/Newsroom/UpdateModal.php',
         'AIOSEO\\Plugin\\Common\\Options\\Cache' => __DIR__ . '/../..' . '/app/Common/Options/Cache.php',
         'AIOSEO\\Plugin\\Common\\Options\\DynamicBackup' => __DIR__ . '/../..' . '/app/Common/Options/DynamicBackup.php',
         'AIOSEO\\Plugin\\Common\\Options\\DynamicOptions' => __DIR__ . '/../..' . '/app/Common/Options/DynamicOptions.php',
@@ -269,6 +274,8 @@ class ComposerStaticInite090444550b72c5e13a019d7adec22cb
         'AIOSEO\\Plugin\\Common\\Social\\Output' => __DIR__ . '/../..' . '/app/Common/Social/Output.php',
         'AIOSEO\\Plugin\\Common\\Social\\Social' => __DIR__ . '/../..' . '/app/Common/Social/Social.php',
         'AIOSEO\\Plugin\\Common\\Social\\Twitter' => __DIR__ . '/../..' . '/app/Common/Social/Twitter.php',
+        'AIOSEO\\Plugin\\Common\\SpellChecker\\Dictionary' => __DIR__ . '/../..' . '/app/Common/SpellChecker/Dictionary.php',
+        'AIOSEO\\Plugin\\Common\\SpellChecker\\SafeWords' => __DIR__ . '/../..' . '/app/Common/SpellChecker/SafeWords.php',
         'AIOSEO\\Plugin\\Common\\Standalone\\AdminBarNoindexWarning' => __DIR__ . '/../..' . '/app/Common/Standalone/AdminBarNoindexWarning.php',
         'AIOSEO\\Plugin\\Common\\Standalone\\BbPress\\BbPress' => __DIR__ . '/../..' . '/app/Common/Standalone/BbPress/BbPress.php',
         'AIOSEO\\Plugin\\Common\\Standalone\\BbPress\\Component' => __DIR__ . '/../..' . '/app/Common/Standalone/BbPress/Component.php',
@@ -404,10 +411,10 @@ class ComposerStaticInite090444550b72c5e13a019d7adec22cb
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInite090444550b72c5e13a019d7adec22cb::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInite090444550b72c5e13a019d7adec22cb::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInite090444550b72c5e13a019d7adec22cb::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInite090444550b72c5e13a019d7adec22cb::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit1dc5609ceff85151a470c5b8ef014319::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit1dc5609ceff85151a470c5b8ef014319::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit1dc5609ceff85151a470c5b8ef014319::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit1dc5609ceff85151a470c5b8ef014319::$classMap;
 
         }, null, ClassLoader::class);
     }
